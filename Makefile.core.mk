@@ -26,7 +26,7 @@ GOOS_LOCAL := $(TARGET_OS)
 
 # ISTIO_IMAGE_VERSION stores the prefix used by default for the Docker images for Istio.
 # For example, a value of 1.6-alpha will assume a default TAG value of 1.6-dev.<SHA>
-ISTIO_IMAGE_VERSION ?= 1.6-alpha
+ISTIO_IMAGE_VERSION ?= 1.7-alpha
 export ISTIO_IMAGE_VERSION
 
 # Determine the SHA for the Istio dependency by parsing the go.mod file.
@@ -66,7 +66,7 @@ baseurl := "$(URL)"
 endif
 
 # Which branch of the Istio source code do we fetch stuff from
-SOURCE_BRANCH_NAME ?= release-1.6
+SOURCE_BRANCH_NAME ?= master
 
 site:
 	@scripts/gen_site.sh
@@ -101,7 +101,7 @@ lint: clean_public build_nominify lint-copyright-banner lint-python lint-yaml li
 lint-en: clean_public build_nominify lint-copyright-banner lint-python lint-yaml lint-dockerfiles lint-scripts lint-sass lint-typescript lint-go
 	@scripts/lint_site.sh en
 
-lint-fast:
+lint-fast: clean_public build_nominify lint-copyright-banner lint-python lint-yaml lint-dockerfiles lint-scripts lint-sass lint-typescript lint-go
 	@SKIP_LINK_CHECK=true scripts/lint_site.sh en
 
 serve: site
@@ -164,10 +164,20 @@ endif
 	@export TAG
 	@echo "TAG=${TAG}"
 
+# doc test framework
 include tests/tests.mk
 
+# remains of old framework to pass istio-testing
+test.kube.presubmit: doc.test
+
+# remains of old framework to pass istio-testing
+test.kube.postsubmit: test.kube.presubmit
+
+test_status:
+	@scripts/test_status.sh
+
 # make lint-yaml seems to fail with pipefail, so remove now.
-#SHELL = /bin/bash
+# SHELL = /bin/bash
 
 include common/Makefile.common.mk
 
