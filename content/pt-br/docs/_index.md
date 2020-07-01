@@ -1,5 +1,5 @@
 ---
-title: Docs
+title: Documentos
 linktitle: Docs
 description: Learn how to deploy, use, and operate Istio.
 weight: 1

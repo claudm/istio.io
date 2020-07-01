@@ -1,35 +1,35 @@
 ---
-title: Getting Started
-description: Try Istio’s features quickly and easily.
+title: Começando
+description: Experimente os recursos do Istio de maneira rápida e fácil.
 weight: 5
 aliases:
     - /docs/setup/kubernetes/getting-started/
     - /docs/setup/kubernetes/
     - /docs/setup/kubernetes/install/kubernetes/
-keywords: [getting-started, install, bookinfo, quick-start, kubernetes]
+keywords: [começando, instalar, bookinfo, começo rápido, kubernetes]
 test: no
 ---
 
-This guide lets you quickly evaluate Istio. If you are already familiar with
-Istio or interested in installing other configuration profiles or
-advanced [deployment models](/pt-br/docs/ops/deployment/deployment-models/), see
-[Customizable Install with `istioctl`](/pt-br/docs/setup/install/istioctl/)
-instead.
+Este guia permite avaliar rapidamente o Istio. Se você já está familiarizado com
+Istio ou interessado em instalar outros perfis de configuração ou
+avançado [modelos de implantação](/pt-br/docs/ops/deployment/deployment-models/), Veja
+[Instalação personalizável com `istioctl`](/pt-br/docs/setup/install/istioctl/)
+como alternativa.
 
-These steps require you to have a {{< gloss >}}cluster{{< /gloss >}} running a
-compatible version of Kubernetes. You can use any supported platform, for
-example [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/) or
-others specified by the
-[platform-specific setup instructions](/pt-br/docs/setup/platform-setup/).
+Essas etapas exigem que você tenha {{< gloss >}}cluster{{< /gloss >}} executando um
+versão compatível do Kubernetes. Você pode usar qualquer plataforma suportada, por
+exemplo [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/) ou
+outros especificados pelas
+[instruções de configuração específicas da plataforma](/pt-br/docs/setup/platform-setup/).
 
-Follow these steps to get started with Istio:
+Siga estas etapas para começar a usar o Istio:
 
-1. [Download and install Istio](#download)
-1. [Deploy the sample application](#bookinfo)
-1. [Open the application to outside traffic](#ip)
-1. [View the dashboard](#dashboard)
+1. [Baixe e instale o Istio](#download)
+1. [Implantar o aplicativo de exemplo](#bookinfo)
+1. [Abra o aplicativo para tráfego externo](#ip)
+1. [Veja o dashboard](#dashboard)
 
-## Download Istio {#download}
+## Baixe o Istio{#download}
 
 1.  Go to the [Istio release]({{< istio_release_url >}}) page to
     download the installation file for your OS, or download and

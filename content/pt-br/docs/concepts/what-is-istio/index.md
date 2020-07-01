@@ -1,52 +1,51 @@
 ---
-title: What is Istio?
-description: Introduces Istio, the problems it solves, its high-level architecture, and its design goals.
+title: O que é Istio?
+description: Apresentação do Istio, os problemas que ele resolve, sua arquitetura de alto nível e seus objetivos de design.
 weight: 10
 aliases:
-    - /docs/concepts/what-is-istio/overview
-    - /docs/concepts/what-is-istio/goals
-    - /about/intro
+    - /pt-br/docs/concepts/what-is-istio/overview
+    - /pt-br/docs/concepts/what-is-istio/goals
+    - /pt-br/about/intro
 test: n/a
 ---
 
-Cloud platforms provide a wealth of benefits for the organizations that use them. However, there’s no denying that adopting the cloud can put strains on DevOps teams. Developers must use microservices to architect for portability, meanwhile operators are managing extremely large hybrid and multi-cloud deployments.
-Istio lets you connect, secure, control, and observe services.
+As plataformas em nuvem oferecem muitos benefícios para as organizações que a usam. Contudo, não há como negar que a adoção da nuvem pode sobrecarregar as equipes de DevOps. Os desenvolvedores devem usar microsserviços para projetar a portabilidade, Enquanto isso, as operadoras estão gerenciando implantações híbridas e de múltiplas nuvens extremamente grandes.
+O Istio permite conectar, proteger, controlar e observar serviços.
 
-At a high level, Istio helps reduce the complexity of these deployments, and eases the strain on your development teams. It is a completely open source service
-mesh that layers transparently onto existing distributed applications. It is also a platform, including APIs that let it integrate into any logging platform, or
-telemetry or policy system. Istio’s diverse feature set lets you successfully, and efficiently, run a distributed microservice architecture, and provides a
-uniform way to secure, connect, and monitor microservices.
+Em um nível alto, o Istio ajuda a reduzir a complexidade dessas implantações e diminui a pressão sobre suas equipes de desenvolvimento. É um código completamente aberto de service
+mesh que coloca de forma transparente os aplicativos distribuídos existentes. É também uma plataforma, incluindo APIs que permitem a integração em qualquer plataforma de logs, ou
+telemetria ou sistema de políticas. O conjunto de recursos diversos do Istio permite que você obtenha êxito, com eficiência, execute uma arquitetura de microsserviço distribuído e forneça uma
+maneira uniforme de proteger, conectar e monitorar microsserviços.
 
-## What is a service mesh?
+## O que é um service mesh?
 
-Istio addresses the challenges developers and operators face as monolithic applications transition towards a distributed microservice architecture. To see how,
-it helps to take a more detailed look at Istio’s service mesh.
+O Istio aborda os desafios que desenvolvedores e operadores enfrentam à medida que os aplicativos monolíticos passam para uma arquitetura de microsserviço distribuído. Para ver como,vamos te ajudar a dar uma olhada mais detalhada no service mesh Istio.
 
-The term service mesh is used to describe the network of microservices that make up such applications and the interactions between them. As a service mesh grows
- in size and complexity, it can become harder to understand and manage. Its requirements can include discovery, load balancing, failure recovery, metrics, and
- monitoring. A service mesh also often has more complex operational requirements, like A/B testing, canary rollouts, rate limiting, access control, and
- end-to-end authentication.
+O termo service mesh é usado para descrever a rede de microsserviços que compõem esses aplicativos e as interações entre eles. À medida que o service mesh  cresce
+ em tamanho e complexidade, pode se tornar mais difícil de entender e gerenciar. Seus requisitos podem incluir descoberta, balanceamento de carga, recuperação de falhas, métricas e
+ monitoramento. O service mesh também costuma ter requisitos operacionais mais complexos, como testes A/B,política de deploy canary, limite de taxa, controle de acesso e
+ autenticação de ponta a ponta.
 
-Istio provides behavioral insights and operational control over the service mesh as a whole, offering a complete solution to satisfy the diverse requirements of
- microservice applications.
+O Istio fornece informações comportamentais e controle operacional sobre o service mesh como um todo, oferecendo uma solução completa para satisfazer os diversos requisitos de
+ aplicativos de microsserviço.
 
-## Why use Istio?
+## Por que usar o Istio?
 
-Istio makes it easy to create a network of deployed services with load balancing, service-to-service authentication, monitoring, and more, with [few](/pt-br/docs/tasks/observability/distributed-tracing/overview/#trace-context-propagation) or no code changes
-in service code. You add Istio support to services by deploying a special sidecar proxy throughout your environment that intercepts all network communication
-between microservices, then configure and manage Istio using its control plane functionality, which includes:
+O Istio facilita a criação de deploy em uma rede de serviços com balanceamento de carga, autenticação de service a service, monitoramento e muito mais, com [poucos](/pt-br/docs/tasks/observability/distributed-tracing/overview/#trace-context-propagation) ou nenhuma alteração de código
+ de seu serviço. Você adiciona o suporte do Istio aos deploys de serviços um sidecar proxy  especial em todo o ambiente que intercepta todas as comunicações de rede
+entre microsserviços, configura e gerencie o Istio usando suas funcionalidadee do plano de controle, que inclui:
 
-* Automatic load balancing for HTTP, gRPC, WebSocket, and TCP traffic.
+* Balanceamento de carga automático para tráfego HTTP, gRPC, WebSocket e TCP.
 
-* Fine-grained control of traffic behavior with rich routing rules, retries, failovers, and fault injection.
+* Controle refinado do comportamento do tráfego com regras de roteamento avançadas, novas tentativas, failovers e injeção de falhas.
 
-* A pluggable policy layer and configuration API supporting access controls, rate limits and quotas.
+* Uma camada de política conectável e API de configuração que suporta controles de acesso, limites de taxas e cotas.
 
-* Automatic metrics, logs, and traces for all traffic within a cluster, including cluster ingress and egress.
+* Métricas, logs e rastreamentos automáticos para todo o tráfego em um cluster, incluindo o cluster ingress e egress.
 
-* Secure service-to-service communication in a cluster with strong identity-based authentication and authorization.
+* Comunicação segura de services as services em um cluster com autenticação e autorização fortes baseadas em identidade.
 
-Istio is designed for extensibility and meets diverse deployment needs. It does this by intercepting and configuring mesh traffic as shown in the following diagram:
+O Istio foi projetado para extensibilidade e atende a diversas necessidades de deploy. Ele faz isso interceptando e configurando o tráfego de mesh, como mostrado no diagrama a seguir:
 
 {{< image width="80%"
     link="/pt-br/docs/ops/deployment/architecture/arch.svg"
@@ -54,14 +53,14 @@ Istio is designed for extensibility and meets diverse deployment needs. It does 
     caption="Istio Architecture"
     >}}
 
-Refer to [architecture](/pt-br/docs/ops/deployment/architecture/) for more details.
+Referência [arquitetura](/pt-br/docs/ops/deployment/architecture/)para mais detalhes.
 
-## Core features
+## Recursos principais
 
-Istio provides a number of key capabilities uniformly across a network of
-services:
+O Istio fornece vários recursos importantes de maneira uniforme em uma rede de
+Serviços:
 
-### Traffic management
+### Gerenciamento de tráfego
 
 Istio’s easy rules configuration and traffic routing lets you control the flow of traffic and API calls between services. Istio simplifies configuration of
 service-level properties like circuit breakers, timeouts, and retries, and makes it a breeze to set up important tasks like A/B testing, canary rollouts, and
@@ -99,13 +98,13 @@ Refer to the [Observability concepts guide](/pt-br/docs/concepts/observability/)
 Istio is platform-independent and designed to run in a variety of environments, including those spanning Cloud, on-premise, Kubernetes, Mesos, and more. You can
  deploy Istio on Kubernetes, or on Nomad with Consul. Istio currently supports:
 
-* Service deployment on Kubernetes
+* Deploy  de serviço no Kubernetes
 
-* Services registered with Consul
+* Serviços registrados no Consul
 
-* Services running on individual virtual machines
+* Serviços em execução em máquinas virtuais individuais
 
-## Integration and customization
+## Integração e customização
 
 The policy enforcement component of Istio can be extended and customized to integrate with existing solutions for ACLs, logging, monitoring, quotas, auditing,
 and more.
