@@ -11,9 +11,9 @@ This task shows you how to customize the metrics that Istio generates.
 Istio generates telemetry that various dashboards consume to help you visualize
 your mesh. For example, dashboards that support Istio include:
 
-* [Grafana](/docs/tasks/observability/metrics/using-istio-dashboard/)
-* [Kiali](/docs/tasks/observability/kiali/)
-* [Prometheus](/docs/tasks/observability/metrics/querying-metrics/)
+* [Grafana](/pt-br/docs/tasks/observability/metrics/using-istio-dashboard/)
+* [Kiali](/pt-br/docs/tasks/observability/kiali/)
+* [Prometheus](/pt-br/docs/tasks/observability/metrics/querying-metrics/)
 
 By default, Istio defines and generates a set of standard metrics (e.g.
 `requests_total`), but you can also customize them and create new metrics.
@@ -32,11 +32,11 @@ provides values for the metric dimensions as expressions, and allows you to
 remove or override the existing metric dimensions. You can modify the standard
 metric definitions using `tags_to_remove` or by re-defining a dimension.
 
-For more information, see [Stats Config reference](/docs/reference/config/proxy_extensions/stats/).
+For more information, see [Stats Config reference](/pt-br/docs/reference/config/proxy_extensions/stats/).
 
 ## Before you begin
 
-[Install Istio](/docs/setup/) in your cluster and deploy an application.
+[Install Istio](/pt-br/docs/setup/) in your cluster and deploy an application.
 Alternatively, you can set up custom statistics as part of the Istio
 installation.
 
@@ -162,4 +162,4 @@ following extra attributes.
 | `plugin_root_id` | string | Wasm root instance ID |
 | `plugin_vm_id` | string | Wasm VM ID |
 
-For more information, see [configuration reference](/docs/reference/config/proxy_extensions/stats/).
+For more information, see [configuration reference](/pt-br/docs/reference/config/proxy_extensions/stats/).

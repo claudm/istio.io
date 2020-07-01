@@ -79,7 +79,7 @@ release, see the [archive page](https://archive.istio.io/).
 
 This branching strategy allows us to provide the following Istio online resources:
 
-- The [public site](/docs/) shows the content from the current
+- The [public site](/pt-br/docs/) shows the content from the current
   release branch.
 
 - The preliminary site at `https://preliminary.istio.io` shows the content from

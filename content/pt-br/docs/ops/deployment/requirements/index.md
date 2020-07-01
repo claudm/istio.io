@@ -36,7 +36,7 @@ requirements:
 
 - **`NET_ADMIN` and `NET_RAW` capabilities**: If your cluster enforces pod security policies,
   they must allow injected pods to add the `NET_ADMIN` and `NET_RAW` capabilities.
-  If you use the [Istio CNI Plugin](/docs/setup/additional-setup/cni/),
+  If you use the [Istio CNI Plugin](/pt-br/docs/setup/additional-setup/cni/),
   this requirement no longer applies. To learn more about the `NET_ADMIN` and `NET_RAW`
   capabilities, see [Required pod capabilities](#required-pod-capabilities), below.
 
@@ -54,7 +54,7 @@ requirements:
       corresponding to the particular deployment.
 
 - **Named service ports**: Service ports may optionally be named to explicitly specify a protocol.
-  See [Protocol Selection](/docs/ops/configuration/traffic-management/protocol-selection/) for
+  See [Protocol Selection](/pt-br/docs/ops/configuration/traffic-management/protocol-selection/) for
   more details.
 
 ## Ports used by Istio

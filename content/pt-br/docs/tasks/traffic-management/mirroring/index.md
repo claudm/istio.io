@@ -19,7 +19,7 @@ you will apply a rule to mirror a portion of traffic to `v2`.
 ## Before you begin
 
 * Set up Istio by following the instructions in the
-  [Installation guide](/docs/setup/).
+  [Installation guide](/pt-br/docs/setup/).
 
 *   Start by deploying two versions of the [httpbin]({{< github_tree >}}/samples/httpbin) service that have access logging enabled:
 

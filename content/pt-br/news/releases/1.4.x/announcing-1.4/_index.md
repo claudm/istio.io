@@ -38,7 +38,7 @@ focuses on simplification and flexibility. This will also replace the old
 
 ## Automatic mutual TLS
 
-We added [automatic mutual TLS support](/docs/tasks/security/authentication/authn-policy/#auto-mutual-tls). It allows
+We added [automatic mutual TLS support](/pt-br/docs/tasks/security/authentication/authn-policy/#auto-mutual-tls). It allows
 you to adopt mutual TLS without needing to configure destination rules. Istio automatically programs
 client sidecar proxies to send mutual TLS to server endpoints that are able to accept mutual TLS.
 
@@ -48,7 +48,7 @@ future release.
 ## Improved troubleshooting
 
 We're introducing the
-[`istioctl analyze`](/docs/ops/diagnostic-tools/istioctl-analyze/) command to
+[`istioctl analyze`](/pt-br/docs/ops/diagnostic-tools/istioctl-analyze/) command to
 improve troubleshooting of your mesh. Check for problems with
 configuration in your mesh, and even validate new configuration prior to
 submitting it to the mesh.
@@ -60,7 +60,7 @@ experience of using it. Envoy now exits more gracefully on crashes, supports
 more metrics, and can mirror traffic to a percentage of traffic. It reports
 the direction of traffic and has better configuration of `stat patterns`.
 Finally, there is a new
-[experimental command](/docs/reference/commands/istioctl/#istioctl-experimental-wait)
+[experimental command](/pt-br/docs/reference/commands/istioctl/#istioctl-experimental-wait)
 that can tell you when configuration
 has been pushed to all proxies in the mesh.
 

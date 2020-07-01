@@ -9,16 +9,16 @@ keywords: [traffic-management,ingress,sds-credentials]
 test: yes
 ---
 
-The [Control Ingress Traffic task](/docs/tasks/traffic-management/ingress)
+The [Control Ingress Traffic task](/pt-br/docs/tasks/traffic-management/ingress)
 describes how to configure an ingress gateway to expose an HTTP
 service to external traffic. This task shows how to expose a secure HTTPS
 service using either simple or mutual TLS.
 
 ## Before you begin
 
-1.  Perform the steps in the [Before you begin](/docs/tasks/traffic-management/ingress/ingress-control#before-you-begin).
-and [Determining the ingress IP and ports](/docs/tasks/traffic-management/ingress/ingress-control/#determining-the-ingress-ip-and-ports)
-sections of the [Control Ingress Traffic](/docs/tasks/traffic-management/ingress/ingress-control) task. After performing
+1.  Perform the steps in the [Before you begin](/pt-br/docs/tasks/traffic-management/ingress/ingress-control#before-you-begin).
+and [Determining the ingress IP and ports](/pt-br/docs/tasks/traffic-management/ingress/ingress-control/#determining-the-ingress-ip-and-ports)
+sections of the [Control Ingress Traffic](/pt-br/docs/tasks/traffic-management/ingress/ingress-control) task. After performing
 those steps you should have Istio and the [httpbin]({{< github_tree >}}/samples/httpbin) service deployed,
 and the environment variables `INGRESS_HOST` and `SECURE_INGRESS_PORT` set.
 
@@ -53,7 +53,7 @@ For this task you can use your favorite tool to generate certificates and keys. 
 
 ### Configure a TLS ingress gateway for a single host
 
-1.  Ensure you have deployed the [httpbin]({{< github_tree >}}/samples/httpbin) service from [Before you begin](/docs/tasks/traffic-management/ingress/ingress-control#before-you-begin).
+1.  Ensure you have deployed the [httpbin]({{< github_tree >}}/samples/httpbin) service from [Before you begin](/pt-br/docs/tasks/traffic-management/ingress/ingress-control#before-you-begin).
 
 1.  Create a secret for the ingress gateway:
 
@@ -422,7 +422,7 @@ $ kubectl create -n istio-system secret generic httpbin-credential --from-file=t
         `"""`
     {{< /text >}}
 
-Istio supports reading a few different Secret formats, to support integration with various tools such as [cert-manager](/docs/ops/integrations/certmanager/):
+Istio supports reading a few different Secret formats, to support integration with various tools such as [cert-manager](/pt-br/docs/ops/integrations/certmanager/):
 
 * A TLS Secret with keys `tls.key` and `tls.crt`, as described above. For mutual TLS, a `ca.crt` key can be used.
 * A generic Secret with keys `key` and `cert`. For mutual TLS, a `cacert` key can be used.

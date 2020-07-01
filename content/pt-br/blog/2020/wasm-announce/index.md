@@ -18,7 +18,7 @@ extensibility to the Envoy proxy using [WebAssembly](https://webassembly.org/). 
 share that work with the world today, as well as
 unveiling [WebAssembly (Wasm) for Proxies](https://github.com/proxy-wasm/spec) (Proxy-Wasm): an ABI,
 which we intend to standardize; SDKs; and its first major implementation, the new,
-lower-latency [Istio telemetry system](/docs/reference/config/proxy_extensions/wasm_telemetry/).
+lower-latency [Istio telemetry system](/pt-br/docs/reference/config/proxy_extensions/wasm_telemetry/).
 
 We have also worked closely with the community to ensure that there is a great developer experience
 for users to get started quickly. The Google team has been working closely with the team
@@ -34,7 +34,7 @@ so they can start experimenting with the tremendous possibilities this opens up.
 
 The need for extensibility has been a founding tenet of both the Istio and Envoy projects,
 but the two projects took different approaches. Istio project focused on enabling a generic
-out-of-process extension model called [Mixer](/docs/reference/config/policy-and-telemetry/mixer-overview/)
+out-of-process extension model called [Mixer](/pt-br/docs/reference/config/policy-and-telemetry/mixer-overview/)
 with a lightweight developer experience, while Envoy focused on in-proxy [extensions](https://www.envoyproxy.io/docs/envoy/latest/extending/extending).
 
 Each approach has its share of pros and cons. The Istio model led to significant resource
@@ -149,13 +149,13 @@ however, this has given us a lot of confidence in our general approach and in th
 environment, ABI and SDKs that have been developed.
 
 We have also been careful to ensure that the Istio control plane and
-its [Envoy configuration APIs](/docs/reference/config/networking/envoy-filter/) are Wasm-ready.
+its [Envoy configuration APIs](/pt-br/docs/reference/config/networking/envoy-filter/) are Wasm-ready.
 We have samples to show how several common customizations such as custom header decoding or
 programmatic routing can be performed which are common asks from users. As we move this support to
 Beta, you will see documentation showing best practices for using Wasm with Istio.
 
 Finally, we are working with the many vendors who have
-written [Mixer adapters](/docs/reference/config/policy-and-telemetry/adapters/),
+written [Mixer adapters](/pt-br/docs/reference/config/policy-and-telemetry/adapters/),
 to help them with a migration to Wasm --- if that is the best path forward. Mixer will move to a
 community project in a future release, where it will remain available for legacy use cases.
 

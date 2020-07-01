@@ -38,19 +38,19 @@ More details on our major efforts in 2020 below.
 
 Istio provided for extensibility from day one, implemented by a component called
 Mixer. Mixer is a platform that allows custom
-[adapters](/docs/reference/config/policy-and-telemetry/mixer-overview/#adapters)
+[adapters](/pt-br/docs/reference/config/policy-and-telemetry/mixer-overview/#adapters)
 to act as an intermediary between the data plane and the backends you use for
 policy or telemetry. Mixer necessarily added overhead to requests because it
 required extensions to be out-of-process. So, we're moving to a model that
 enables extension directly in the proxies instead.
 
 Most of Mixer’s use cases for policy enforcement are already addressed with
-Istio's [authentication](/docs/concepts/security/#authentication-policies)
-and [authorization](/docs/concepts/security/#authorization) policies, which
+Istio's [authentication](/pt-br/docs/concepts/security/#authentication-policies)
+and [authorization](/pt-br/docs/concepts/security/#authorization) policies, which
 allow you to control workload-to-workload and end-user-to-workload authorization
 directly in the proxy. Common monitoring use cases have already moved into the
 proxy too - we have
-[introduced in-proxy support](/docs/reference/config/metrics)
+[introduced in-proxy support](/pt-br/docs/reference/config/metrics)
 for sending telemetry to Prometheus and Stackdriver.
 
 Our benchmarking shows that the new telemetry model reduces our latency
@@ -131,7 +131,7 @@ application's configuration to take advantage of most Istio features.
 To improve Istio’s life-cycle management, we moved to an
 [operator](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/)-based
 installation. We introduced the
-**[IstioOperator CRD and two installation modes](/docs/setup/install/istioctl/)**:
+**[IstioOperator CRD and two installation modes](/pt-br/docs/setup/install/istioctl/)**:
 
 - Human-triggered: use istioctl to apply the settings to the cluster.
 - Machine-triggered: use a controller that is continually watching for changes
@@ -153,7 +153,7 @@ status of our APIs, see our
 
 Network traffic is also becoming more secure by default. After many users
 enabled it in preview,
-[automated rollout of mutual TLS](/docs/tasks/security/authentication/authn-policy/#auto-mutual-tls)
+[automated rollout of mutual TLS](/pt-br/docs/tasks/security/authentication/authn-policy/#auto-mutual-tls)
 is becoming the recommended practice in Istio 1.5.
 
 In addition we will make Istio require fewer privileges and simplify its

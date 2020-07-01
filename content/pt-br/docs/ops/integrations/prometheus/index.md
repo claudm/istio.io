@@ -6,7 +6,7 @@ keywords: [integration,prometheus]
 test: n/a
 ---
 
-[Prometheus](https://prometheus.io/) is an open source monitoring system and time series database. You can use Prometheus with Istio to record metrics that track the health of Istio and of applications within the service mesh. You can visualize metrics using tools like [Grafana](/docs/ops/integrations/grafana/) and [Kiali](/docs/tasks/observability/kiali/).
+[Prometheus](https://prometheus.io/) is an open source monitoring system and time series database. You can use Prometheus with Istio to record metrics that track the health of Istio and of applications within the service mesh. You can visualize metrics using tools like [Grafana](/pt-br/docs/ops/integrations/grafana/) and [Kiali](/pt-br/docs/tasks/observability/kiali/).
 
 ## Configuration
 
@@ -29,7 +29,7 @@ To simplify configuration, Istio has the ability to control scraping entirely by
 While `prometheus.io` annotations are not a core part of Prometheus, they have become the de facto standard to configure scraping.
 {{< /tip >}}
 
-This option is enabled by default but can be disabled by passing `--set meshConfig.enablePrometheusMerge=false` during [installation](/docs/setup/install/istioctl/). When enabled, appropriate `prometheus.io` annotations will be added to all workloads to set up scraping. If these annotations already exist, they will be overwritten. With this option, the Envoy sidecar will merge Istio's metrics with the application metrics.
+This option is enabled by default but can be disabled by passing `--set meshConfig.enablePrometheusMerge=false` during [installation](/pt-br/docs/setup/install/istioctl/). When enabled, appropriate `prometheus.io` annotations will be added to all workloads to set up scraping. If these annotations already exist, they will be overwritten. With this option, the Envoy sidecar will merge Istio's metrics with the application metrics.
 
 This option exposes all the metrics in plain text.
 
@@ -43,7 +43,7 @@ If required, this feature can be disabled per workload by adding a `prometheus.i
 
 ### Option 2: Customized scraping configurations
 
-The built-in demo installation of Prometheus contains all the required scraping configuration. To deploy this instance of Prometheus, follow the steps in [Customizable Install with Istioctl](/docs/setup/install/istioctl/) to install Istio and pass `--set values.prometheus.enabled=true` during installation.
+The built-in demo installation of Prometheus contains all the required scraping configuration. To deploy this instance of Prometheus, follow the steps in [Customizable Install with Istioctl](/pt-br/docs/setup/install/istioctl/) to install Istio and pass `--set values.prometheus.enabled=true` during installation.
 
 This built-in deployment of Prometheus is intended for new users to help them quickly getting started. However, it does not offer advanced customization, like persistence or authentication and as such should not be considered production ready. To use an existing Prometheus instance, add the scraping configurations in [`prometheus/configmap.yaml`]({{< github_file>}}/manifests/charts/istio-telemetry/prometheus/templates/configmap.yaml) to your configuration.
 
@@ -55,10 +55,10 @@ This configuration will add scrape job configurations for the control plane, as 
 
 #### TLS settings
 
-The control plane, gateway, and Envoy sidecar metrics will all be scraped over plaintext. However, the application metrics will follow whatever Istio configuration has been configured for the workload. In particular, if [Strict mTLS](/docs/tasks/security/authentication/authn-policy/#globally-enabling-istio-mutual-tls-in-strict-mode) is enabled, then Prometheus will need to be configured to scrape using Istio certificates.
+The control plane, gateway, and Envoy sidecar metrics will all be scraped over plaintext. However, the application metrics will follow whatever Istio configuration has been configured for the workload. In particular, if [Strict mTLS](/pt-br/docs/tasks/security/authentication/authn-policy/#globally-enabling-istio-mutual-tls-in-strict-mode) is enabled, then Prometheus will need to be configured to scrape using Istio certificates.
 
 When using the bundled Prometheus deployment, this is configured by default. For custom Prometheus deployments, please follow [Provision a certificate and key for an application without sidecars](/blog/2020/proxy-cert/) to provision a certificate for Prometheus, then add the TLS scraping configuration.
 
 ## Best practices
 
-For larger meshes, advanced configuration might help Prometheus scale. See [Using Prometheus for production-scale monitoring](/docs/ops/best-practices/observability/#using-prometheus-for-production-scale-monitoring) for more information.
+For larger meshes, advanced configuration might help Prometheus scale. See [Using Prometheus for production-scale monitoring](/pt-br/docs/ops/best-practices/observability/#using-prometheus-for-production-scale-monitoring) for more information.

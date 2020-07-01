@@ -13,7 +13,7 @@ test: no
 
 ## End-user authentication fails
 
-With Istio, you can enable authentication for end users through [request authentication policies](/docs/tasks/security/authentication/authn-policy/#end-user-authentication). Follow these steps to troubleshoot the policy specification.
+With Istio, you can enable authentication for end users through [request authentication policies](/pt-br/docs/tasks/security/authentication/authn-policy/#end-user-authentication). Follow these steps to troubleshoot the policy specification.
 
 1. If `jwksUri` isn’t set, make sure the JWT issuer is of url format and `url + /.well-known/openid-configuration` can be opened in browser; for example, if the JWT issuer is `https://accounts.google.com`, make sure `https://accounts.google.com/.well-known/openid-configuration` is a valid url and can be opened in a browser.
 
@@ -101,7 +101,7 @@ If authorization checks are enabled for a service and yet requests to the
 service aren't being blocked, then authorization was likely not enabled
 successfully. To verify, follow these steps:
 
-1. Check the [authorization concept documentation](/docs/concepts/security/#authorization)
+1. Check the [authorization concept documentation](/pt-br/docs/concepts/security/#authorization)
    to correctly apply Istio authorization.
 
 1. Make sure there is no typo in your policy YAML file. Especially check to make sure the authorization policy is applied
@@ -182,7 +182,7 @@ Pilot distributes the authorization policies to proxies. The following steps hel
 is working as expected:
 
 {{< tip >}}
-The command used in this section assumes you have deployed [Bookinfo application](/docs/examples/bookinfo/),
+The command used in this section assumes you have deployed [Bookinfo application](/pt-br/docs/examples/bookinfo/),
 otherwise you should replace `"-l app=productpage"` with your actual pod.
 {{< /tip >}}
 
@@ -255,7 +255,7 @@ Proxies eventually enforce the authorization policies. The following steps help 
 is working as expected:
 
 {{< tip >}}
-The command used in this section assumes you have deployed [Bookinfo application](/docs/examples/bookinfo/).
+The command used in this section assumes you have deployed [Bookinfo application](/pt-br/docs/examples/bookinfo/).
 otherwise you should replace `"-l app=productpage"` with your actual pod.
 {{< /tip >}}
 
@@ -517,7 +517,7 @@ Certificate:
 If you suspect problems with mutual TLS, first ensure that [Citadel is healthy](#repairing-citadel), and
 second ensure that [keys and certificates are being delivered](#keys-and-certificates-errors) to sidecars properly.
 
-If everything appears to be working so far, the next step is to verify that the right [authentication policy](/docs/tasks/security/authentication/authn-policy/)
+If everything appears to be working so far, the next step is to verify that the right [authentication policy](/pt-br/docs/tasks/security/authentication/authn-policy/)
 is applied and the right destination rules are in place.
 
 ## Citadel is not behaving properly {#repairing-citadel}

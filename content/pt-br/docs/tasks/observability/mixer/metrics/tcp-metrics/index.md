@@ -18,12 +18,12 @@ This task shows how to configure Istio to automatically gather telemetry for TCP
 services in a mesh. At the end of this task, a new metric will be enabled for
 calls to a TCP service within your mesh.
 
-The [Bookinfo](/docs/examples/bookinfo/) sample application is used
+The [Bookinfo](/pt-br/docs/examples/bookinfo/) sample application is used
 as the example application throughout this task.
 
 ## Before you begin
 
-* [Install Istio](/docs/setup) with Mixer enabled in your cluster and deploy an application.
+* [Install Istio](/pt-br/docs/setup) with Mixer enabled in your cluster and deploy an application.
 
     The *custom* configuration needed to use Mixer for telemetry is:
 
@@ -43,7 +43,7 @@ as the example application throughout this task.
         enabled: true
     {{< /text >}}
 
-    Please see the guide on [Customizing the configuration](/docs/setup/install/istioctl/#customizing-the-configuration)
+    Please see the guide on [Customizing the configuration](/pt-br/docs/setup/install/istioctl/#customizing-the-configuration)
     for information on how to apply these settings.
 
     Once the configuration has been applied, confirm a telemetry-focused instance of Mixer is running:
@@ -174,7 +174,7 @@ In this task, you added Istio configuration that instructed Mixer to
 automatically generate and report a new metric for all traffic to a TCP service
 within the mesh.
 
-Similar to the [Collecting Metrics](/docs/tasks/observability/mixer/metrics/collecting-metrics/) Task, the new
+Similar to the [Collecting Metrics](/pt-br/docs/tasks/observability/mixer/metrics/collecting-metrics/) Task, the new
 configuration consisted of _instances_, a _handler_, and a _rule_. Please see
 that Task for a complete description of the components of metric collection.
 
@@ -213,5 +213,5 @@ protocols within policies.
     {{< /text >}}
 
 * If you are not planning to explore any follow-on tasks, refer to the
-  [Bookinfo cleanup](/docs/examples/bookinfo/#cleanup) instructions
+  [Bookinfo cleanup](/pt-br/docs/examples/bookinfo/#cleanup) instructions
   to shutdown the application.

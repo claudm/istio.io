@@ -136,4 +136,4 @@ openssl command is expected.
     $ kubectl delete ns foo istio-system
     {{< /text >}}
 
-*   To remove the Istio components: follow the [uninstall instructions](/docs/setup/getting-started/#uninstall) to remove.
+*   To remove the Istio components: follow the [uninstall instructions](/pt-br/docs/setup/getting-started/#uninstall) to remove.

@@ -32,7 +32,7 @@ Istio provides behavioral insights and operational control over the service mesh
 
 ## Why use Istio?
 
-Istio makes it easy to create a network of deployed services with load balancing, service-to-service authentication, monitoring, and more, with [few](/docs/tasks/observability/distributed-tracing/overview/#trace-context-propagation) or no code changes
+Istio makes it easy to create a network of deployed services with load balancing, service-to-service authentication, monitoring, and more, with [few](/pt-br/docs/tasks/observability/distributed-tracing/overview/#trace-context-propagation) or no code changes
 in service code. You add Istio support to services by deploying a special sidecar proxy throughout your environment that intercepts all network communication
 between microservices, then configure and manage Istio using its control plane functionality, which includes:
 
@@ -49,12 +49,12 @@ between microservices, then configure and manage Istio using its control plane f
 Istio is designed for extensibility and meets diverse deployment needs. It does this by intercepting and configuring mesh traffic as shown in the following diagram:
 
 {{< image width="80%"
-    link="/docs/ops/deployment/architecture/arch.svg"
+    link="/pt-br/docs/ops/deployment/architecture/arch.svg"
     alt="The overall architecture of an Istio-based application."
     caption="Istio Architecture"
     >}}
 
-Refer to [architecture](/docs/ops/deployment/architecture/) for more details.
+Refer to [architecture](/pt-br/docs/ops/deployment/architecture/) for more details.
 
 ## Core features
 
@@ -70,7 +70,7 @@ staged rollouts with percentage-based traffic splits.
 With better visibility into your traffic, and out-of-box failure recovery features, you can catch issues before they cause problems, making calls more reliable,
 and your network more robust -- no matter what conditions you face.
 
-Refer to the [Traffic management concepts guide](/docs/concepts/traffic-management/) for more details.
+Refer to the [Traffic management concepts guide](/pt-br/docs/concepts/traffic-management/) for more details.
 
 ### Security
 
@@ -81,7 +81,7 @@ letting you enforce policies consistently across diverse protocols and runtimes 
 While Istio is platform independent, using it with Kubernetes (or infrastructure) network policies, the benefits are even greater, including the ability to
 secure {{<gloss>}}pod{{</gloss>}}-to-pod or service-to-service communication at the network and application layers.
 
-Refer to the [Security concepts guide](/docs/concepts/security/) for more details.
+Refer to the [Security concepts guide](/pt-br/docs/concepts/security/) for more details.
 
 ### Observability
 
@@ -92,7 +92,7 @@ services and let you see how that performance is affecting your other processes.
 All these features let you more effectively set, monitor, and enforce SLOs on services. Of course, the bottom line is that you can detect and fix issues quickly
 and efficiently.
 
-Refer to the [Observability concepts guide](/docs/concepts/observability/) for more details.
+Refer to the [Observability concepts guide](/pt-br/docs/concepts/observability/) for more details.
 
 ## Platform support
 

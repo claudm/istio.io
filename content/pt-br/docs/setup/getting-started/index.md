@@ -12,15 +12,15 @@ test: no
 
 This guide lets you quickly evaluate Istio. If you are already familiar with
 Istio or interested in installing other configuration profiles or
-advanced [deployment models](/docs/ops/deployment/deployment-models/), see
-[Customizable Install with `istioctl`](/docs/setup/install/istioctl/)
+advanced [deployment models](/pt-br/docs/ops/deployment/deployment-models/), see
+[Customizable Install with `istioctl`](/pt-br/docs/setup/install/istioctl/)
 instead.
 
 These steps require you to have a {{< gloss >}}cluster{{< /gloss >}} running a
 compatible version of Kubernetes. You can use any supported platform, for
 example [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/) or
 others specified by the
-[platform-specific setup instructions](/docs/setup/platform-setup/).
+[platform-specific setup instructions](/pt-br/docs/setup/platform-setup/).
 
 Follow these steps to get started with Istio:
 
@@ -56,7 +56,7 @@ Follow these steps to get started with Istio:
     The installation directory contains:
 
     - Sample applications in `samples/`
-    - The [`istioctl`](/docs/reference/commands/istioctl) client binary in the
+    - The [`istioctl`](/pt-br/docs/reference/commands/istioctl) client binary in the
       `bin/` directory.
 
 1.  Add the `istioctl` client to your path (Linux or macOS):
@@ -68,7 +68,7 @@ Follow these steps to get started with Istio:
 ## Install Istio {#install}
 
 1.  For this installation, we use the `demo`
-    [configuration profile](/docs/setup/additional-setup/config-profiles/). It's
+    [configuration profile](/pt-br/docs/setup/additional-setup/config-profiles/). It's
     selected to have a good set of defaults for testing, but there are other
     profiles for production or performance testing.
 
@@ -92,7 +92,7 @@ Follow these steps to get started with Istio:
 
 ## Deploy the sample application {#bookinfo}
 
-1.  Deploy the [`Bookinfo` sample application](/docs/examples/bookinfo/):
+1.  Deploy the [`Bookinfo` sample application](/pt-br/docs/examples/bookinfo/):
 
     {{< text bash >}}
     $ kubectl apply -f @samples/bookinfo/platform/kube/bookinfo.yaml@
@@ -157,7 +157,7 @@ Follow these steps to get started with Istio:
 
 The Bookinfo application is deployed but not accessible from the outside. To make it accessible,
 you need to create an
-[Istio Ingress Gateway](/docs/concepts/traffic-management/#gateways), which maps a path to a
+[Istio Ingress Gateway](/pt-br/docs/concepts/traffic-management/#gateways), which maps a path to a
 route at the edge of your mesh.
 
 1.  Associate this application with the Istio gateway:
@@ -356,21 +356,21 @@ Congratulations on completing the evaluation installation!
 These tasks are a great place for beginners to further evaluate Istio's
 features using this `demo` installation:
 
-- [Request routing](/docs/tasks/traffic-management/request-routing/)
-- [Fault injection](/docs/tasks/traffic-management/fault-injection/)
-- [Traffic shifting](/docs/tasks/traffic-management/traffic-shifting/)
-- [Querying metrics](/docs/tasks/observability/metrics/querying-metrics/)
-- [Visualizing metrics](/docs/tasks/observability/metrics/using-istio-dashboard/)
-- [Rate limiting](/docs/tasks/policy-enforcement/rate-limiting/)
-- [Accessing external services](/docs/tasks/traffic-management/egress/egress-control/)
-- [Visualizing your mesh](/docs/tasks/observability/kiali/)
+- [Request routing](/pt-br/docs/tasks/traffic-management/request-routing/)
+- [Fault injection](/pt-br/docs/tasks/traffic-management/fault-injection/)
+- [Traffic shifting](/pt-br/docs/tasks/traffic-management/traffic-shifting/)
+- [Querying metrics](/pt-br/docs/tasks/observability/metrics/querying-metrics/)
+- [Visualizing metrics](/pt-br/docs/tasks/observability/metrics/using-istio-dashboard/)
+- [Rate limiting](/pt-br/docs/tasks/policy-enforcement/rate-limiting/)
+- [Accessing external services](/pt-br/docs/tasks/traffic-management/egress/egress-control/)
+- [Visualizing your mesh](/pt-br/docs/tasks/observability/kiali/)
 
 Before you customize Istio for production use, see these resources:
 
-- [Deployment models](/docs/ops/deployment/deployment-models/)
-- [Deployment best practices](/docs/ops/best-practices/deployment/)
-- [Pod requirements](/docs/ops/deployment/requirements/)
-- [General installation instructions](/docs/setup/)
+- [Deployment models](/pt-br/docs/ops/deployment/deployment-models/)
+- [Deployment best practices](/pt-br/docs/ops/best-practices/deployment/)
+- [Pod requirements](/pt-br/docs/ops/deployment/requirements/)
+- [General installation instructions](/pt-br/docs/setup/)
 
 ## Join the Istio community
 
@@ -380,7 +380,7 @@ We welcome you to ask questions and give us feedback by joining the
 ## Uninstall
 
 To delete the `Bookinfo` sample application and its configuration, see
-[`Bookinfo` cleanup](/docs/examples/bookinfo/#cleanup).
+[`Bookinfo` cleanup](/pt-br/docs/examples/bookinfo/#cleanup).
 
 The Istio uninstall deletes the RBAC permissions and all resources hierarchically
 under the `istio-system` namespace. It is safe to ignore errors for non-existent

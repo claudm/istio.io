@@ -21,9 +21,9 @@ weighted routing feature.
 
 ## Before you begin
 
-* Setup Istio by following the instructions in the [Installation guide](/docs/setup/).
+* Setup Istio by following the instructions in the [Installation guide](/pt-br/docs/setup/).
 
-* Review the [Traffic Management](/docs/concepts/traffic-management) concepts doc.
+* Review the [Traffic Management](/pt-br/docs/concepts/traffic-management) concepts doc.
 
 ## Set up the test environment
 
@@ -47,7 +47,7 @@ weighted routing feature.
     {{< /text >}}
 
 1.  Follow the instructions in
-    [Determining the ingress IP and ports](/docs/tasks/traffic-management/ingress/ingress-control/#determining-the-ingress-ip-and-ports)
+    [Determining the ingress IP and ports](/pt-br/docs/tasks/traffic-management/ingress/ingress-control/#determining-the-ingress-ip-and-ports)
     to define the `TCP_INGRESS_PORT` and `INGRESS_HOST` environment variables.
 
 ## Apply weight-based TCP routing

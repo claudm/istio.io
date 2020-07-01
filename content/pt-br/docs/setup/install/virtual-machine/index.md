@@ -13,7 +13,7 @@ test: no
 Follow this guide to deploy Istio and connect a virtual machine to it.
 
 {{< warning >}}
-This guide has a requirement that the user is using a [plugin root CA](/docs/tasks/security/cert-management/plugin-ca-cert/)
+This guide has a requirement that the user is using a [plugin root CA](/pt-br/docs/tasks/security/cert-management/plugin-ca-cert/)
 and has configured Istio as an intermediate CA.
 {{< /warning >}}
 
@@ -24,9 +24,9 @@ but not production. Like all alpha features, this guide is subject to change.
 
 ## Prerequisites
 
-1. [Download the Istio release](/docs/setup/getting-started/#download)
-1. Perform any necessary [platform-specific setup](/docs/setup/platform-setup/)
-1. Check the requirements [for Pods and Services](/docs/ops/deployment/requirements/)
+1. [Download the Istio release](/pt-br/docs/setup/getting-started/#download)
+1. Perform any necessary [platform-specific setup](/pt-br/docs/setup/platform-setup/)
+1. Check the requirements [for Pods and Services](/pt-br/docs/ops/deployment/requirements/)
 1. Virtual machines must have IP connectivity to the ingress gateway in the connecting mesh, and optionally every pod in the mesh via L3 networking if enhanced performance is desired.
 
 ## Prepare the guide environment
@@ -58,7 +58,7 @@ deployment you place into production.
 {{< /tip >}}
 
 1. Execute the following commands to create certificates for use by Istio. See
-    [Certificate Authority (CA) certificates](/docs/tasks/security/cert-management/plugin-ca-cert/)
+    [Certificate Authority (CA) certificates](/pt-br/docs/tasks/security/cert-management/plugin-ca-cert/)
     for more details on configuring an external CA. The `NAME` variable is
     used during certificate generation to uniquely identify clusters. The
     `NAMESPACE` variable identifies the namespace where the virtual machine
@@ -142,7 +142,7 @@ The Istio control plane must be installed with virtual machine integration enabl
 
 1. Add an IP address that represents Istiod. Replace `${INGRESS_HOST}` with the
     ingress gateway service of istiod. Revisit
-    [Determining the ingress host and ports](/docs/tasks/traffic-management/ingress/ingress-control/#determining-the-ingress-ip-and-ports) to set the environment variable `${INGRESS_HOST}`.
+    [Determining the ingress host and ports](/pt-br/docs/tasks/traffic-management/ingress/ingress-control/#determining-the-ingress-ip-and-ports) to set the environment variable `${INGRESS_HOST}`.
 
     {{< text bash >}}
     $ touch "${WORK_DIR}"/"${CLUSTER_NAME}"/"${SERVICE_NAMESPACE}"/hosts-addendum

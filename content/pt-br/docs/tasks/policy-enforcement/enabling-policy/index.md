@@ -16,7 +16,7 @@ instead of mixer rate limiting. Istio will add support for native rate limiting 
 [`lua` filter](https://www.envoyproxy.io/docs/envoy/v1.13.0/configuration/http/http_filters/lua_filter),
 or write a filter using the [`Envoy-wasm` sandbox](https://github.com/envoyproxy/envoy-wasm/tree/master/test/extensions/filters/http/wasm/test_data).
 
-* Denials and White/Black Listing: Please use the [Authorization Policy](/docs/concepts/security/#authorization) for
+* Denials and White/Black Listing: Please use the [Authorization Policy](/pt-br/docs/concepts/security/#authorization) for
 enforcing access control to a workload.
 {{< /warning >}}
 
@@ -27,7 +27,7 @@ This task shows you how to enable Istio policy enforcement.
 In the default Istio installation profile, policy enforcement is disabled. To install Istio
 with policy enforcement on, use the `--set meshConfig.disablePolicyChecks=false` and `--set values.pilot.policy.enabled=true` install option.
 
-Alternatively, you may [install Istio using the demo profile](/docs/setup/getting-started/),
+Alternatively, you may [install Istio using the demo profile](/pt-br/docs/setup/getting-started/),
 which enables policy checks by default.
 
 ## For an existing Istio mesh

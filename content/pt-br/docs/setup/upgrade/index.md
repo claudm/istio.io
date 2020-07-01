@@ -92,7 +92,7 @@ default values between Istio versions.
 
 The upgrade command can also perform a downgrade of Istio.
 
-See the [`istioctl` upgrade reference](/docs/reference/commands/istioctl/#istioctl-upgrade)
+See the [`istioctl` upgrade reference](/pt-br/docs/reference/commands/istioctl/#istioctl-upgrade)
 for all the options provided by the `istioctl upgrade` command.
 
 ### Upgrade prerequisites
@@ -101,7 +101,7 @@ Ensure you meet these requirements before starting the upgrade process:
 
 * Istio version 1.4.4 or higher is installed.
 
-* Your Istio installation was [installed using {{< istioctl >}}](/docs/setup/install/istioctl/).
+* Your Istio installation was [installed using {{< istioctl >}}](/pt-br/docs/setup/install/istioctl/).
 
 ### Upgrade steps
 
@@ -115,7 +115,7 @@ are configured with a minimum availability of 1.
 The commands in this section should be run using the new version of `istioctl` which
 can be found in the `bin/` subdirectory of the downloaded package.
 
-1. [Download the new Istio release](/docs/setup/getting-started/#download)
+1. [Download the new Istio release](/pt-br/docs/setup/getting-started/#download)
    and change directory to the new release directory.
 
 1. Verify that `istoctl` supports upgrading from your current Istio version by
@@ -138,7 +138,7 @@ can be found in the `bin/` subdirectory of the downloaded package.
     {{< /text >}}
 
     `<your-custom-configuration-file>` is the
-    [IstioOperator API Configuration](/docs/setup/install/istioctl/#configure-component-settings)
+    [IstioOperator API Configuration](/pt-br/docs/setup/install/istioctl/#configure-component-settings)
     file you used to customize the installation of the currently-running version of Istio.
 
     {{< warning >}}
@@ -172,7 +172,7 @@ Ensure you meet these requirements before starting the downgrade process:
 
 * Istio version 1.5 or higher is installed.
 
-* Your Istio installation was [installed using {{< istioctl >}}](/docs/setup/install/istioctl/).
+* Your Istio installation was [installed using {{< istioctl >}}](/pt-br/docs/setup/install/istioctl/).
 
 * Downgrade must be done using the `istioctl` binary version that
 corresponds to the Istio version that you intend to downgrade to.

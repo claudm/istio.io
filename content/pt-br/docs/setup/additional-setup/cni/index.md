@@ -25,7 +25,7 @@ networking functionality but without requiring Istio users to enable elevated
 Kubernetes RBAC permissions.
 
 The Istio CNI plugin performs the Istio mesh pod traffic redirection in the Kubernetes pod lifecycle's network
-setup phase, thereby removing the [requirement for the `NET_ADMIN` and `NET_RAW` capabilities](/docs/ops/deployment/requirements/)
+setup phase, thereby removing the [requirement for the `NET_ADMIN` and `NET_RAW` capabilities](/pt-br/docs/ops/deployment/requirements/)
 for users deploying pods into the Istio mesh.  The Istio CNI plugin
 replaces the functionality provided by the `istio-init` container.
 
@@ -71,7 +71,7 @@ $ istioctl install -f istio-cni.yaml
     Refer to [Hosted Kubernetes settings](#hosted-kubernetes-settings) for any non-default settings required.
 
 1.  Install Istio CNI and Istio using `istioctl`.
-    Refer to the [Istio install](/docs/setup/install/istioctl/) instructions and pass `--set components.cni.enabled=true` option.
+    Refer to the [Istio install](/pt-br/docs/setup/install/istioctl/) instructions and pass `--set components.cni.enabled=true` option.
     Pass `--set values.cni.cniBinDir=...` and/or `--set values.cni.cniConfDir=...` options when installing `istio-cni` if non-default,
     as determined in the previous step.
 
@@ -115,7 +115,7 @@ This example uses `istioctl` to perform the following tasks:
     * `foo_ns`
     * `bar_ns`
 
-Refer to the [Customizable Install with `Istioctl`](/docs/setup/install/istioctl) for complete instructions.
+Refer to the [Customizable Install with `Istioctl`](/pt-br/docs/setup/install/istioctl) for complete instructions.
 
 Use the following command to render and apply Istio CNI components and override the default configuration of the
 `logLevel` and `excludeNamespaces` parameters for `istio-cni`:
@@ -199,7 +199,7 @@ In order to deploy Istio 1.4 on OpenShift with CNI you need to use at least Isti
 
 ### GKE setup
 
-1.  Refer to the procedure to [prepare a GKE cluster for Istio](/docs/setup/platform-setup/gke/) and
+1.  Refer to the procedure to [prepare a GKE cluster for Istio](/pt-br/docs/setup/platform-setup/gke/) and
     enable [network-policy](https://cloud.google.com/kubernetes-engine/docs/how-to/network-policy) in your cluster.
 
     {{< warning >}}
@@ -219,14 +219,14 @@ In order to deploy Istio 1.4 on OpenShift with CNI you need to use at least Isti
 
 The use of the Istio CNI plugin requires Kubernetes pods to be deployed with a sidecar injection method
 that uses the `istio-sidecar-injector` configmap created from the installation with the
-`--set cni.enabled=true` option.  Refer to [Istio sidecar injection](/docs/setup/additional-setup/sidecar-injection/)
+`--set cni.enabled=true` option.  Refer to [Istio sidecar injection](/pt-br/docs/setup/additional-setup/sidecar-injection/)
 for details about Istio sidecar injection methods.
 
 The following sidecar injection methods are supported for use with the Istio CNI plugin:
 
-1.  [Automatic sidecar injection](/docs/setup/additional-setup/sidecar-injection/#automatic-sidecar-injection)
+1.  [Automatic sidecar injection](/pt-br/docs/setup/additional-setup/sidecar-injection/#automatic-sidecar-injection)
 1.  Manual sidecar injection with the `istio-sidecar-injector` configmap
-    1.  [`istioctl kube-inject`](/docs/reference/commands/istioctl/#istioctl-kube-inject) using the configmap directly:
+    1.  [`istioctl kube-inject`](/pt-br/docs/reference/commands/istioctl/#istioctl-kube-inject) using the configmap directly:
 
         {{< text bash >}}
         $ istioctl kube-inject -f deployment.yaml -o deployment-injected.yaml --injectConfigMapName istio-sidecar-injector

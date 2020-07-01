@@ -14,7 +14,7 @@ For an overview of new features introduced with Istio 1.1, please refer to the [
 the update.
 
 - Istio’s CRDs have been placed into their own Helm chart `istio-init`.  This prevents loss of custom resource data, facilitates the upgrade process, and enables
-Istio to evolve beyond a Helm-based installation.  The [upgrade documentation](/docs/setup/upgrade/) provides the proper procedures for upgrading
+Istio to evolve beyond a Helm-based installation.  The [upgrade documentation](/pt-br/docs/setup/upgrade/) provides the proper procedures for upgrading
 from Istio 1.0.6 to Istio 1.1.  Please follow these instructions carefully when upgrading.  If `certmanager` is desired, use the `--set certmanager=true` flag
 when installing both `istio-init` and Istio charts with either `template` or `tiller` installation modes.
 
@@ -26,13 +26,13 @@ summary of the changes.
 installation has been consolidated into the Istio chart. To generate an equivalent `istio-remote` chart, use the `--set global.istioRemote=true` flag.
 
 - Addons are no longer exposed via separate load balancers.  Instead addons can now be optionally exposed via the Ingress Gateway.  To expose an addon via the
-Ingress Gateway, please follow the [Remotely Accessing Telemetry Addons](/docs/tasks/observability/gateways/) guide.
+Ingress Gateway, please follow the [Remotely Accessing Telemetry Addons](/pt-br/docs/tasks/observability/gateways/) guide.
 
 - The built-in Istio Statsd collector has been removed. Istio retains the capability of integrating with your own Statsd collector, using the
 `--set global.envoyStatsd.enabled=true` flag.
 
 - The `ingress` series of options for configuring a Kubernetes Ingress have been removed.  Kubernetes Ingress is still functional and can be enabled using the
-`--set global.k8sIngress.enabled=true` flag.  Check out [Securing Kubernetes Ingress with Cert-Manager](/docs/ops/integrations/certmanager/)
+`--set global.k8sIngress.enabled=true` flag.  Check out [Securing Kubernetes Ingress with Cert-Manager](/pt-br/docs/ops/integrations/certmanager/)
 to learn how to secure your Kubernetes ingress resources.
 
 ## Traffic management

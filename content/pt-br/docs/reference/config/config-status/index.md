@@ -30,7 +30,7 @@ informational messages, including:
 
 For example, the `kubectl wait` command monitors the `status` field to determine
 whether to unblock configuration and resume. For more information, see
-[Wait for Resource Status to Apply Configuration](/docs/ops/configuration/mesh/config-resource-ready/).
+[Wait for Resource Status to Apply Configuration](/pt-br/docs/ops/configuration/mesh/config-resource-ready/).
 
 ## View the `status` field
 
@@ -110,4 +110,4 @@ when `PassedValidation` status is `True`, because those are informational
 messages.
 
 For validation message examples, see
-[Configuration Analysis Messages](/docs/reference/config/analysis/).
+[Configuration Analysis Messages](/pt-br/docs/reference/config/analysis/).

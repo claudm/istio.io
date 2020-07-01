@@ -22,7 +22,7 @@ There are a few ways to configure Grafana to use these dashboards:
 
 ### Use the built-in Grafana deployment
 
-The built-in deployment of Grafana is bundled with all of the Istio dashboards already installed. To deploy the built-in Grafana instance, follow the steps in [Customizable Install with Istioctl](/docs/setup/install/istioctl/) to install Istio and pass `--set values.grafana.enabled=true` during installation.
+The built-in deployment of Grafana is bundled with all of the Istio dashboards already installed. To deploy the built-in Grafana instance, follow the steps in [Customizable Install with Istioctl](/pt-br/docs/setup/install/istioctl/) to install Istio and pass `--set values.grafana.enabled=true` during installation.
 
 This built-in deployment of Grafana is intended for new users quickly getting started. However, it does not offer advanced customization, like persistence or authentication.
 

@@ -44,9 +44,9 @@ tools to protect your services and data. The goals of Istio security are:
 - Zero-trust network: build security solutions on distrusted networks
 
 Visit our
-[mutual TLS Migration docs](/docs/tasks/security/authentication/mtls-migration/)
+[mutual TLS Migration docs](/pt-br/docs/tasks/security/authentication/mtls-migration/)
 to start using Istio security features with your deployed services. Visit our
-[Security Tasks](/docs/tasks/security/) for detailed
+[Security Tasks](/pt-br/docs/tasks/security/) for detailed
 instructions to use the security features.
 
 ## High-level architecture
@@ -56,9 +56,9 @@ Security in Istio involves multiple components:
 - A Certificate Authority (CA) for key and certificate management
 - The configuration API server distributes to the proxies:
 
-    - [authentication policies](/docs/concepts/security/#authentication-policies)
-    - [authorization policies](/docs/concepts/security/#authorization-policies)
-    - [secure naming information](/docs/concepts/security/#secure-naming)
+    - [authentication policies](/pt-br/docs/concepts/security/#authentication-policies)
+    - [authorization policies](/pt-br/docs/concepts/security/#authorization-policies)
+    - [secure naming information](/pt-br/docs/concepts/security/#secure-naming)
 
 - Sidecar and perimeter proxies work as [Policy Enforcement Points](https://www.jerichosystems.com/technology/glossaryterms/policy_enforcement_point.html)
     (PEPs) to  secure communication between clients and servers.
@@ -81,11 +81,11 @@ Identity is a fundamental concept of any security infrastructure. At the
 beginning of a workload-to-workload communication, the two parties must exchange
 credentials with their identity information for mutual authentication purposes.
 On the client side, the server's identity is checked against the
-[secure naming](/docs/concepts/security/#secure-naming)
+[secure naming](/pt-br/docs/concepts/security/#secure-naming)
 information to see if it is an authorized runner of the workload. On the server
 side, the server can determine what information the client can access based on
 the
-[authorization policies](/docs/concepts/security/#authorization-policies),
+[authorization policies](/pt-br/docs/concepts/security/#authorization-policies),
 audit who accessed what at what time, charge clients based on the workloads they
 used, and reject any clients who failed to pay their bill from accessing the
 workloads.
@@ -180,7 +180,7 @@ follows:
    sidecar Envoy.
 1. The client side Envoy starts a mutual TLS handshake with the server side
    Envoy. During the handshake, the client side Envoy also does a
-   [secure naming](/docs/concepts/security/#secure-naming)
+   [secure naming](/pt-br/docs/concepts/security/#secure-naming)
    check to verify that the service account presented in the server certificate
    is authorized to run the target service.
 1. The client side Envoy and the server side Envoy establish a mutual TLS
@@ -209,7 +209,7 @@ without breaking existing plaintext traffic. As a result, the operator can
 gradually install and configure the client's Istio sidecars to send mutual TLS
 traffic. Once the configuration of the clients is complete, the operator can
 configure the server to mutual TLS only mode. For more information, visit the
-[Mutual TLS Migration tutorial](/docs/tasks/security/authentication/mtls-migration).
+[Mutual TLS Migration tutorial](/pt-br/docs/tasks/security/authentication/mtls-migration).
 
 #### Secure naming
 
@@ -270,9 +270,9 @@ mutual TLS, Istio automatically upgrades all traffic between two PEPs to mutual
 TLS. If authentication policies disable mutual TLS mode, Istio continues to use
 plain text between PEPs. To override this behavior explicitly disable mutual
 TLS mode with
-[destination rules](/docs/concepts/traffic-management/#destination-rules).
+[destination rules](/pt-br/docs/concepts/traffic-management/#destination-rules).
 You can find out more about how mutual TLS works in the
-[Mutual TLS authentication section](/docs/concepts/security/#mutual-tls-authentication).
+[Mutual TLS authentication section](/pt-br/docs/concepts/security/#mutual-tls-authentication).
 
 {{< image width="75%"
     link="./authn.svg"
@@ -281,17 +281,17 @@ You can find out more about how mutual TLS works in the
 
 Istio outputs identities with both types of authentication, as well as other
 claims in the credential if applicable, to the next layer:
-[authorization](/docs/concepts/security/#authorization).
+[authorization](/pt-br/docs/concepts/security/#authorization).
 
 ### Authentication policies
 
 This section provides more details about how Istio authentication policies work.
 As you'll remember from the
-[Architecture section](/docs/concepts/security/#authentication-architecture),
+[Architecture section](/pt-br/docs/concepts/security/#authentication-architecture),
 authentication policies apply to requests that a service receives. To specify
 client-side authentication rules in mutual TLS, you need to specify the
 `TLSSettings` in the `DestinationRule`. You can find more information in our
-[TLS settings reference docs](/docs/reference/config/networking/destination-rule#ClientTLSSettings).
+[TLS settings reference docs](/pt-br/docs/reference/config/networking/destination-rule#ClientTLSSettings).
 
 Like other Istio configurations, you can specify authentication policies in
 `.yaml` files. You deploy policies using `kubectl`.
@@ -502,7 +502,7 @@ the following benefits:
 
 - Workload-to-workload and end-user-to-workload authorization.
 - A Simple API: it includes a single
-  [`AuthorizationPolicy` CRD](/docs/reference/config/security/authorization-policy/),
+  [`AuthorizationPolicy` CRD](/pt-br/docs/reference/config/security/authorization-policy/),
   which is easy to use and maintain.
 - Flexible semantics: operators can define custom conditions on Istio
   attributes, and use DENY and ALLOW actions.
@@ -539,7 +539,7 @@ policies to the same workload, Istio applies them additively.
 ### Authorization policies
 
 To configure an authorization policy, you create an
-[`AuthorizationPolicy` custom resource](/docs/reference/config/security/authorization-policy/).
+[`AuthorizationPolicy` custom resource](/pt-br/docs/reference/config/security/authorization-policy/).
 An authorization policy includes a selector, an action, and a list of rules:
 
 - The `selector` field specifies the target of the policy
@@ -798,7 +798,7 @@ spec:
 {{< /text >}}
 
 The supported `key` values of a condition are listed in the
-[conditions page](/docs/reference/config/security/conditions/).
+[conditions page](/pt-br/docs/reference/config/security/conditions/).
 
 #### Authenticated and unauthenticated identity
 
@@ -861,7 +861,7 @@ conditions are only applicable to HTTP workloads. These fields include:
    authorization policy object
 
 The supported conditions are listed in the
-[conditions page](/docs/reference/config/security/conditions/).
+[conditions page](/pt-br/docs/reference/config/security/conditions/).
 If you use any HTTP only fields for a TCP workload, Istio will ignore HTTP-only
 fields in the authorization policy.
 

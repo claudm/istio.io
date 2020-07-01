@@ -8,8 +8,8 @@ test: no
 
 [Kiali](https://kiali.io/) is an observability console for Istio with service mesh configuration and validation capabilities.
 It helps you understand the structure and health of your service mesh by monitoring traffic flow to infer the topology and report errors.
-Kiali provides detailed metrics and a basic [Grafana](/docs/ops/integrations/grafana) integration, which can be used for advanced queries.
-Distributed tracing is provided by integration with [Jaeger](/docs/ops/integrations/jaeger).
+Kiali provides detailed metrics and a basic [Grafana](/pt-br/docs/ops/integrations/grafana) integration, which can be used for advanced queries.
+Distributed tracing is provided by integration with [Jaeger](/pt-br/docs/ops/integrations/jaeger).
 
 ## Configuration
 
@@ -29,4 +29,4 @@ The Kiali project offers its own [customizable installation methods](https://kia
 
 ## Usage
 
-For more information about using Kiali, see the [Visualizing Your Mesh](/docs/tasks/observability/kiali/) task.
+For more information about using Kiali, see the [Visualizing Your Mesh](/pt-br/docs/tasks/observability/kiali/) task.

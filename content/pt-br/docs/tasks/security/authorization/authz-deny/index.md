@@ -7,15 +7,15 @@ test: yes
 ---
 
 This task shows you how to set up Istio authorization policy that denies HTTP traffic
-in an Istio mesh. Learn more in our [authorization concept page](/docs/concepts/security/#authorization).
+in an Istio mesh. Learn more in our [authorization concept page](/pt-br/docs/concepts/security/#authorization).
 
 ## Before you begin
 
 Before tackling this task you must perform the following actions:
 
-* Read the [authorization concept](/docs/concepts/security/#authorization).
+* Read the [authorization concept](/pt-br/docs/concepts/security/#authorization).
 
-* Follow the [Istio installation guide](/docs/setup/install/istioctl/) to install Istio.
+* Follow the [Istio installation guide](/pt-br/docs/setup/install/istioctl/) to install Istio.
 
 * Deploy workloads:
 

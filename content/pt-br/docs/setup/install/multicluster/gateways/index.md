@@ -12,8 +12,8 @@ test: no
 ---
 
 Follow this guide to install an Istio
-[multicluster deployment](/docs/ops/deployment/deployment-models/#multiple-clusters)
-with replicated [control plane](/docs/ops/deployment/deployment-models/#control-plane-models) instances
+[multicluster deployment](/pt-br/docs/ops/deployment/deployment-models/#multiple-clusters)
+with replicated [control plane](/pt-br/docs/ops/deployment/deployment-models/#control-plane-models) instances
 in every cluster and using gateways to connect services across clusters.
 
 Instead of using a shared Istio control plane to manage the mesh,
@@ -32,7 +32,7 @@ Cross-cluster communication occurs over the Istio gateways of the respective clu
 
 * Two or more Kubernetes clusters with versions: {{< supported_kubernetes_versions >}}.
 
-* Authority to [deploy the Istio control plane](/docs/setup/install/istioctl/)
+* Authority to [deploy the Istio control plane](/pt-br/docs/setup/install/istioctl/)
   on **each** Kubernetes cluster.
 
 * The IP address of the `istio-ingressgateway` service in each cluster must be accessible
@@ -64,7 +64,7 @@ Cross-cluster communication occurs over the Istio gateways of the respective clu
 1. Run the following commands in **every cluster** to deploy an identical Istio control plane
     configuration in all of them.
 
-    * Create a Kubernetes secret for your generated CA certificates using a command similar to the following. See [Certificate Authority (CA) certificates](/docs/tasks/security/cert-management/plugin-ca-cert/) for more details.
+    * Create a Kubernetes secret for your generated CA certificates using a command similar to the following. See [Certificate Authority (CA) certificates](/pt-br/docs/tasks/security/cert-management/plugin-ca-cert/) for more details.
 
         {{< warning >}}
         The root and intermediate certificate from the samples directory are widely
@@ -89,7 +89,7 @@ Cross-cluster communication occurs over the Istio gateways of the respective clu
         {{< /text >}}
 
     For further details and customization options, refer to the
-    [installation instructions](/docs/setup/install/istioctl/).
+    [installation instructions](/pt-br/docs/setup/install/istioctl/).
 
 ## Setup DNS
 
@@ -297,7 +297,7 @@ running in a second cluster. Before you begin:
     If `cluster2` is running in an environment that does not
     support external load balancers, you will need to use a nodePort to access the gateway.
     Instructions for obtaining the IP to use can be found in the
-    [Control Ingress Traffic](/docs/tasks/traffic-management/ingress/ingress-control/#determining-the-ingress-ip-and-ports)
+    [Control Ingress Traffic](/pt-br/docs/tasks/traffic-management/ingress/ingress-control/#determining-the-ingress-ip-and-ports)
     guide. You will also need to change the service entry endpoint port in the following step from 15443
     to its corresponding nodePort
     (i.e., `kubectl --context=$CTX_CLUSTER2 get svc -n istio-system istio-ingressgateway -o=jsonpath='{.spec.ports[?(@.port==15443)].nodePort}'`).

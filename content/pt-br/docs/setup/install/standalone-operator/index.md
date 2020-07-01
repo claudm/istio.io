@@ -15,11 +15,11 @@ The operator is beta in 1.6 and suitable for production use.
 
 ## Prerequisites
 
-1. Perform any necessary [platform-specific setup](/docs/setup/platform-setup/).
+1. Perform any necessary [platform-specific setup](/pt-br/docs/setup/platform-setup/).
 
-1. Check the [Requirements for Pods and Services](/docs/ops/deployment/requirements/).
+1. Check the [Requirements for Pods and Services](/pt-br/docs/ops/deployment/requirements/).
 
-1. Install the [{{< istioctl >}} command](/docs/ops/diagnostic-tools/istioctl/).
+1. Install the [{{< istioctl >}} command](/pt-br/docs/ops/diagnostic-tools/istioctl/).
 
 1. Deploy the Istio operator:
 
@@ -48,13 +48,13 @@ The operator is beta in 1.6 and suitable for production use.
       --set istioNamespace=istio-system | kubectl apply -f -
     {{< /text >}}
 
-    Note that you need to [download the Istio release](/docs/setup/getting-started/#download)
+    Note that you need to [download the Istio release](/pt-br/docs/setup/getting-started/#download)
     to run the above command.
     {{< /tip >}}
 
 ## Install
 
-To install the Istio `demo` [configuration profile](/docs/setup/additional-setup/config-profiles/)
+To install the Istio `demo` [configuration profile](/pt-br/docs/setup/additional-setup/config-profiles/)
 using the operator, run the following command:
 
 {{< text bash >}}
@@ -162,7 +162,7 @@ checking the operator controller logs:
 $ kubectl logs -f -n istio-operator $(kubectl get pods -n istio-operator -lname=istio-operator -o jsonpath='{.items[0].metadata.name}')
 {{< /text >}}
 
-Refer to the [`IstioOperator` API](/docs/reference/config/istio.operator.v1alpha1/#IstioOperatorSpec)
+Refer to the [`IstioOperator` API](/pt-br/docs/reference/config/istio.operator.v1alpha1/#IstioOperatorSpec)
 for the complete set of configuration settings.
 
 ## Uninstall

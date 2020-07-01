@@ -9,11 +9,11 @@ aliases:
 test: no
 ---
 
-You can gain insights into what individual components are doing by inspecting their [logs](/docs/ops/diagnostic-tools/component-logging/)
-or peering inside via [introspection](/docs/ops/diagnostic-tools/controlz/). If that's insufficient, the steps below explain
+You can gain insights into what individual components are doing by inspecting their [logs](/pt-br/docs/ops/diagnostic-tools/component-logging/)
+or peering inside via [introspection](/pt-br/docs/ops/diagnostic-tools/controlz/). If that's insufficient, the steps below explain
 how to get under the hood.
 
-The [`istioctl`](/docs/reference/commands/istioctl) tool is a configuration command line utility that allows service operators to debug and diagnose their Istio service mesh deployments. The Istio project also includes two helpful scripts for `istioctl` that enable auto-completion for Bash and ZSH. Both of these scripts provide support for the currently available `istioctl` commands.
+The [`istioctl`](/pt-br/docs/reference/commands/istioctl) tool is a configuration command line utility that allows service operators to debug and diagnose their Istio service mesh deployments. The Istio project also includes two helpful scripts for `istioctl` that enable auto-completion for Bash and ZSH. Both of these scripts provide support for the currently available `istioctl` commands.
 
 {{< tip >}}
 `istioctl` only has auto-completion enabled for non-deprecated commands.
@@ -24,7 +24,7 @@ The [`istioctl`](/docs/reference/commands/istioctl) tool is a configuration comm
 We recommend you use an `istioctl` version that is the same version as your Istio control plane. Using matching versions helps avoid unforeseen issues.
 
 {{< tip >}}
-If you have already [downloaded the Istio release](/docs/setup/getting-started/#download), you should
+If you have already [downloaded the Istio release](/pt-br/docs/setup/getting-started/#download), you should
 already have `istioctl` and do not need to install it again.
 {{< /tip >}}
 
@@ -60,7 +60,7 @@ Pilot needs to be scaled.
 
 ## Get proxy configuration
 
-[`istioctl`](/docs/reference/commands/istioctl) allows you to retrieve information about proxy configuration using the `proxy-config` or `pc` command.
+[`istioctl`](/pt-br/docs/reference/commands/istioctl) allows you to retrieve information about proxy configuration using the `proxy-config` or `pc` command.
 
 For example, to retrieve information about cluster configuration for the Envoy instance in a specific pod:
 
@@ -92,7 +92,7 @@ To retrieve information about endpoint configuration for the Envoy instance in a
 $ istioctl proxy-config endpoints <pod-name> [flags]
 {{< /text >}}
 
-See [Debugging Envoy and Istiod](/docs/ops/diagnostic-tools/proxy-cmd/) for more advice on interpreting this information.
+See [Debugging Envoy and Istiod](/pt-br/docs/ops/diagnostic-tools/proxy-cmd/) for more advice on interpreting this information.
 
 ## `istioctl` auto-completion
 
@@ -140,7 +140,7 @@ Once the `bash-completion` package has been installed on your Linux system, add 
 To enable `istioctl` completion on your system, follow the steps for your preferred shell:
 
 {{< warning >}}
-You will need to download the full Istio release containing the auto-completion files (in the `/tools` directory). If you haven't already done so, [download the full release](/docs/setup/getting-started/#download) now.
+You will need to download the full Istio release containing the auto-completion files (in the `/tools` directory). If you haven't already done so, [download the full release](/pt-br/docs/setup/getting-started/#download) now.
 {{< /warning >}}
 
 {{< tabset category-name="profile" >}}

@@ -17,10 +17,10 @@ prevent the attacks.
 ## Secure control of egress traffic in Istio
 
 To implement secure control of egress traffic in Istio, you must
-[direct TLS traffic to external services through an egress gateway](/docs/tasks/traffic-management/egress/egress-gateway/#egress-gateway-for-https-traffic).
+[direct TLS traffic to external services through an egress gateway](/pt-br/docs/tasks/traffic-management/egress/egress-gateway/#egress-gateway-for-https-traffic).
 Alternatively, you
-can [direct HTTP traffic through an egress gateway](/docs/tasks/traffic-management/egress/egress-gateway/#egress-gateway-for-http-traffic)
-and [let the egress gateway perform TLS origination](/docs/tasks/traffic-management/egress/egress-gateway-tls-origination/#perform-tls-origination-with-an-egress-gateway).
+can [direct HTTP traffic through an egress gateway](/pt-br/docs/tasks/traffic-management/egress/egress-gateway/#egress-gateway-for-http-traffic)
+and [let the egress gateway perform TLS origination](/pt-br/docs/tasks/traffic-management/egress/egress-gateway-tls-origination/#perform-tls-origination-with-an-egress-gateway).
 
 Both alternatives have their pros and cons, you should choose between them according to your circumstances.
 The choice mainly depends on whether your application can send unencrypted HTTP requests and whether your
@@ -34,16 +34,16 @@ If the application sends HTTP requests and the egress gateway performs TLS origi
 information like HTTP methods, headers, and URL paths. You can also
 [define policies](/blog/2018/egress-monitoring-access-control) based on said HTTP information. If the application
 performs TLS origination, you can
-[monitor SNI and the service account](/docs/tasks/traffic-management/egress/egress_sni_monitoring_and_policies/) of the
+[monitor SNI and the service account](/pt-br/docs/tasks/traffic-management/egress/egress_sni_monitoring_and_policies/) of the
 source pod's TLS traffic, and define policies based on SNI and service accounts.
 
 You must ensure that traffic from your cluster to the outside cannot bypass the egress gateway. Istio cannot enforce it
 for you, so you must apply some
-[additional security mechanisms](/docs/tasks/traffic-management/egress/egress-gateway/#additional-security-considerations),
+[additional security mechanisms](/pt-br/docs/tasks/traffic-management/egress/egress-gateway/#additional-security-considerations),
 for example,
 the [Kubernetes network policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/) or an L3
 firewall. See an example of the
-[Kubernetes network policies configuration](/docs/tasks/traffic-management/egress/egress-gateway/#apply-kubernetes-network-policies).
+[Kubernetes network policies configuration](/pt-br/docs/tasks/traffic-management/egress/egress-gateway/#apply-kubernetes-network-policies).
 According to the [Defense in depth](https://en.wikipedia.org/wiki/Defense_in_depth_(computing)) concept, the more
 security mechanisms you apply for the same goal, the better.
 
@@ -65,7 +65,7 @@ Once you direct egress traffic through an egress gateway and apply the additiona
 you can securely monitor and enforce security policies for the traffic.
 
 The following diagram shows Istio's security architecture, augmented with an L3 firewall which is part of the
-[additional security mechanisms](/docs/tasks/traffic-management/egress/egress-gateway/#additional-security-considerations)
+[additional security mechanisms](/pt-br/docs/tasks/traffic-management/egress/egress-gateway/#additional-security-considerations)
 that should be provided outside of Istio.
 
 {{< image width="80%" link="./SecurityArchitectureWithL3Firewalls.svg" caption="Istio Security Architecture with Egress Gateway and L3 Firewall" >}}
@@ -114,7 +114,7 @@ Having failed to achieve their goals in a straightforward way, the malicious act
   disable enforcement of the security policies. This attack is prevented by applying the special security measures to
   the egress gateway pods.
 - **Impersonate as application B** since application **B** is allowed to access `mongo1.composedb.com`. This attack,
-  fortunately, is prevented by Istio's [strong identity support](/docs/concepts/security/#istio-identity).
+  fortunately, is prevented by Istio's [strong identity support](/pt-br/docs/concepts/security/#istio-identity).
 
 As far as we can see, all the forbidden access is prevented, or at least is monitored and can be prevented later.
 If you see other attacks that involve egress traffic or security holes in the current design, we would be happy

@@ -6,7 +6,7 @@ keywords: [contribute,community,github,pr,documentation,review, approval]
 ---
 
 The maintainers and working group leads of the Istio Docs Working Group (WG) approve
-all changes to the [Istio website](/docs/).
+all changes to the [Istio website](/pt-br/docs/).
 
 A **documentation reviewer** is a trusted contributor that approves content that
 meets the acceptance criteria described in the [review criteria](#review-criteria).

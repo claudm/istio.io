@@ -9,6 +9,6 @@ test: n/a
 
 ## Adapters
 
-The table below shows the set of [adapters](/docs/reference/config/policy-and-telemetry/adapters) that implement each supported template.
+The table below shows the set of [adapters](/pt-br/docs/reference/config/policy-and-telemetry/adapters) that implement each supported template.
 
 {{< template_table >}}

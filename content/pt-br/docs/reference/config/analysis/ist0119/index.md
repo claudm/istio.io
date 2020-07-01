@@ -7,7 +7,7 @@ test: no
 This message occurs when a authentication Policy specifies the use of JWT authentication, but
 the targeted [Kubernetes services](https://kubernetes.io/docs/concepts/services-networking/service/) is not configured
 properly. A properly targeted Kubernetes service requires the port to be named with a prefix of http|http2|https
-(see [Protocol Selection](/docs/ops/configuration/traffic-management/protocol-selection/)) and also requires the
+(see [Protocol Selection](/pt-br/docs/ops/configuration/traffic-management/protocol-selection/)) and also requires the
 protocol to be TCP; an empty protocol is acceptable as TCP is the default value.
 
 ## Example

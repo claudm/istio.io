@@ -21,7 +21,7 @@ the relevant resources are ready.
 In Istio 1.6 and later, you can use the `kubectl wait` command to have more
 control over the way that Istio applies configuration changes to the mesh. To
 make this possible, the `kubectl wait` command monitors the
-[`status` field](/docs/reference/config/config-status/) of the resource's
+[`status` field](/pt-br/docs/reference/config/config-status/) of the resource's
 status, which Istio updates as it propagates configuration changes.
 
 ## Before you begin

@@ -13,9 +13,9 @@ aliases:
 test: no
 ---
 
-Setup a [multicluster Istio service mesh](/docs/ops/deployment/deployment-models/#multiple-clusters)
+Setup a [multicluster Istio service mesh](/pt-br/docs/ops/deployment/deployment-models/#multiple-clusters)
 across multiple clusters with a shared control plane. In this configuration, multiple Kubernetes clusters running
-a remote configuration connect to a shared Istio [control plane](/docs/ops/deployment/deployment-models/#control-plane-models)
+a remote configuration connect to a shared Istio [control plane](/pt-br/docs/ops/deployment/deployment-models/#control-plane-models)
 running in a main cluster. Clusters may be on the same network or different networks than other
 clusters in the mesh. Once one or more remote Kubernetes clusters are connected to the Istio control plane,
 Envoy can then form a mesh.
@@ -49,7 +49,7 @@ across different clusters. For illustration purposes, the following instructions
 use the certificates from the Istio samples directory for both clusters.
 
 Run the following commands on each cluster in the mesh to install the certificates.
-See [Certificate Authority (CA) certificates](/docs/tasks/security/cert-management/plugin-ca-cert/)
+See [Certificate Authority (CA) certificates](/pt-br/docs/tasks/security/cert-management/plugin-ca-cert/)
 for more details on configuring an external CA.
 
 {{< text bash >}}
@@ -494,7 +494,7 @@ You have configured a multi-cluster Istio mesh, installed samples and verified c
 
 The Istiod service in each cluster provides automatic sidecar injection for proxies in its own cluster.
 Namespaces must be labeled in each cluster following the
-[automatic sidecar injection](/docs/setup/additional-setup/sidecar-injection/#automatic-sidecar-injection) guide
+[automatic sidecar injection](/pt-br/docs/setup/additional-setup/sidecar-injection/#automatic-sidecar-injection) guide
 
 ### Access services from different clusters
 

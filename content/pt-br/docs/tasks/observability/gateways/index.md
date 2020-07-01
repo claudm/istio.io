@@ -20,7 +20,7 @@ will not protect any credentials or data transmitted outside of your cluster.
 
 For both options, first follow these steps:
 
-1. [Install Istio](/docs/setup/install/istioctl) in your cluster.
+1. [Install Istio](/pt-br/docs/setup/install/istioctl) in your cluster.
 
     To additionally install the telemetry addons, use the following installation options:
 
@@ -54,7 +54,7 @@ This option covers securing the transport layer *only*. You should also configur
 addons to require authentication when exposing them externally.
 {{< /warning >}}
 
-This example uses self-signed certificates, which may not be appropriate for production usages. For these cases, consider using [cert-manager](/docs/ops/integrations/certmanager/) or other tools to provision certificates. You may also visit the [Securing Gateways with HTTPS](/docs/tasks/traffic-management/ingress/secure-ingress/) task for general information on using HTTPS on the gateway.
+This example uses self-signed certificates, which may not be appropriate for production usages. For these cases, consider using [cert-manager](/pt-br/docs/ops/integrations/certmanager/) or other tools to provision certificates. You may also visit the [Securing Gateways with HTTPS](/pt-br/docs/tasks/traffic-management/ingress/secure-ingress/) task for general information on using HTTPS on the gateway.
 
 1. Setup the certificates. This example uses `openssl` to self sign.
 

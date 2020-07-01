@@ -12,12 +12,12 @@ test: no
 This task shows how to configure Istio to automatically gather telemetry for TCP
 services in a mesh. At the end of this task, you can query default TCP metrics for your mesh.
 
-The [Bookinfo](/docs/examples/bookinfo/) sample application is used
+The [Bookinfo](/pt-br/docs/examples/bookinfo/) sample application is used
 as the example throughout this task.
 
 ## Before you begin
 
-* [Install Istio](/docs/setup) in your cluster and deploy an
+* [Install Istio](/pt-br/docs/setup) in your cluster and deploy an
 application.
 
 * This task assumes that the Bookinfo sample will be deployed in the `default`
@@ -100,7 +100,7 @@ example configuration and commands.
     {{< /text >}}
 
     {{< tip >}}
-    `$GATEWAY_URL` is the value set in the [Bookinfo](/docs/examples/bookinfo/) example.
+    `$GATEWAY_URL` is the value set in the [Bookinfo](/pt-br/docs/examples/bookinfo/) example.
     {{< /tip >}}
 
 1.  Verify that the TCP metric values are being generated and collected.
@@ -141,7 +141,7 @@ In this task, you used Istio configuration to
 automatically generate and report metrics for all traffic to a TCP service
 within the mesh.
 TCP Metrics for all active connections are recorded every `15s` by default and this timer is configurable
-via `[tcpReportingDurationconfig](/docs/reference/config/proxy_extensions/stats/#PluginConfig)`.
+via `[tcpReportingDurationconfig](/pt-br/docs/reference/config/proxy_extensions/stats/#PluginConfig)`.
 Metrics for a connection are also recorded at the end of the connection.
 
 ### TCP attributes
@@ -174,5 +174,5 @@ This protocol extends TCP as follows:
     {{< /text >}}
 
 * If you are not planning to explore any follow-on tasks, refer to the
-  [Bookinfo cleanup](/docs/examples/bookinfo/#cleanup) instructions
+  [Bookinfo cleanup](/pt-br/docs/examples/bookinfo/#cleanup) instructions
   to shutdown the application.

@@ -36,9 +36,9 @@ configure the Istio installation itself, and generate the configuration files
 that let VMs connect to the mesh. Prepare the cluster for the VM with the
 following commands on a machine with cluster admin privileges:
 
-1. Create a Kubernetes secret for your generated CA certificates using a command similar to the following. See [Certificate Authority (CA) certificates](/docs/tasks/security/cert-management/plugin-ca-cert/) for more details.
+1. Create a Kubernetes secret for your generated CA certificates using a command similar to the following. See [Certificate Authority (CA) certificates](/pt-br/docs/tasks/security/cert-management/plugin-ca-cert/) for more details.
 
-1. Follow the same steps as [setting up single-network](/docs/examples/virtual-machines/single-network) configuration for the initial setup of the
+1. Follow the same steps as [setting up single-network](/pt-br/docs/examples/virtual-machines/single-network) configuration for the initial setup of the
    cluster and certificates with the change of how you deploy Istio control plane:
 
     {{< text bash >}}
@@ -109,7 +109,7 @@ After setup, the machine can access services running in the Kubernetes cluster
 or on other VMs.
 
 The following example shows accessing a service running in the Kubernetes cluster from a VM using
-`/etc/hosts/`, in this case using a service from the [Bookinfo example](/docs/examples/bookinfo/).
+`/etc/hosts/`, in this case using a service from the [Bookinfo example](/pt-br/docs/examples/bookinfo/).
 
 1.  Connect to the cluster service from VM as in the example below:
 
@@ -148,7 +148,7 @@ The `server: istio-envoy` header indicates that the sidecar intercepted the traf
     {{< /text >}}
 
     {{< tip >}}
-    Ensure you have added the `istioctl` client to your path, as described in the [download page](/docs/setup/getting-started/#download).
+    Ensure you have added the `istioctl` client to your path, as described in the [download page](/pt-br/docs/setup/getting-started/#download).
     {{< /tip >}}
 
 1. Deploy a pod running the `sleep` service in the Kubernetes cluster, and wait until it is ready:

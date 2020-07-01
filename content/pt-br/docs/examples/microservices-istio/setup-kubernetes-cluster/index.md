@@ -12,7 +12,7 @@ namespace to use throughout the tutorial.
 
 {{< warning >}}
 If you are in a workshop and the instructors provide a cluster for you,
-proceed to [setting up your local computer](/docs/examples/microservices-istio/setup-local-computer).
+proceed to [setting up your local computer](/pt-br/docs/examples/microservices-istio/setup-local-computer).
 {{</ warning >}}
 
 1.  Ensure you have access to a
@@ -42,10 +42,10 @@ proceed to [setting up your local computer](/docs/examples/microservices-istio/s
     simultaneously by multiple participants.
     {{< /tip >}}
 
-1.  [Install Istio](/docs/setup/getting-started/) using the `demo` profile.
+1.  [Install Istio](/pt-br/docs/setup/getting-started/) using the `demo` profile.
 
 1.  Next, enable Envoy's access logging as described in
-    [Enable Envoy's access logging](/docs/tasks/observability/logs/access-log/#before-you-begin).
+    [Enable Envoy's access logging](/pt-br/docs/tasks/observability/logs/access-log/#before-you-begin).
     Skip the clean up and delete steps, because you need the sleep
     application for later tutorial modules.
 
@@ -251,4 +251,4 @@ proceed to [setting up your local computer](/docs/examples/microservices-istio/s
 
 Congratulations, you configured your cluster for the tutorial!
 
-You are ready to [setup a local computer](/docs/examples/microservices-istio/setup-local-computer).
+You are ready to [setup a local computer](/pt-br/docs/examples/microservices-istio/setup-local-computer).

@@ -16,7 +16,7 @@ In Istio 1.4, we introduce an alpha feature to support {{< gloss >}}trust domain
 
 ## Before you begin
 
-1. Read the [authorization concept guide](/docs/concepts/security/#authorization).
+1. Read the [authorization concept guide](/pt-br/docs/concepts/security/#authorization).
 
 1. Install Istio with a custom trust domain and mutual TLS enabled.
 

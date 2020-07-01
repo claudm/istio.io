@@ -145,7 +145,7 @@ an hour as long as there does not appear to be degradation in the service. Istio
 enhances the value of Kubernetes by helping you perform these tasks in a
 straightforward way. For more detailed information and best practices about
 deployment, see
-[Deployment models](/docs/ops/deployment/deployment-models/).
+[Deployment models](/pt-br/docs/ops/deployment/deployment-models/).
 
 From here, you have two choices:
 
@@ -163,9 +163,9 @@ From here, you have two choices:
    Since your microservices use different programming languages, you have to
    learn, use, update multiple libraries.
 
-See [Istio service mesh](/docs/concepts/what-is-istio/#what-is-a-service-mesh)
+See [Istio service mesh](/pt-br/docs/concepts/what-is-istio/#what-is-a-service-mesh)
 to learn how Istio can perform the tasks mentioned here and more. In the
 next modules, you explore various Istio features.
 
 You are ready to
-[enable Istio on `productpage`](/docs/examples/microservices-istio/add-istio/).
+[enable Istio on `productpage`](/pt-br/docs/examples/microservices-istio/add-istio/).

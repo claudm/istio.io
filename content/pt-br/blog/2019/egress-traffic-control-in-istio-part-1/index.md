@@ -80,7 +80,7 @@ combined them with the
 Istio 1.1 satisfies all gathered requirements:
 
 1.  Support for [TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security) with
-    [SNI](https://en.wikipedia.org/wiki/Server_Name_Indication) or for [TLS origination](/docs/reference/glossary/#tls-origination) by Istio.
+    [SNI](https://en.wikipedia.org/wiki/Server_Name_Indication) or for [TLS origination](/pt-br/docs/reference/glossary/#tls-origination) by Istio.
 
 1.  **Monitor** SNI and the source workload of every egress access.
 

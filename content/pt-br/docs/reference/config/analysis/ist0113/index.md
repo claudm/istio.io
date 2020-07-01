@@ -81,7 +81,7 @@ Destination rules are matched in the following order:
 1. A destination rule in the "root namespace" (which is, by default,
    `istio-system`) that matches `my-service.my-namespace.svc.cluster.local`. The
    root namespace is controlled by the `rootNamespace` property in the
-   [`MeshConfig` resource](/docs/reference/config/istio.mesh.v1alpha1/#MeshConfig).
+   [`MeshConfig` resource](/pt-br/docs/reference/config/istio.mesh.v1alpha1/#MeshConfig).
    Note that the `exportTo` field must specify that this resource is public
    (e.g. it has the value `"*"` or is not specified) in order for a match to
    occur.
@@ -119,7 +119,7 @@ You can fix the conflict by doing one of the following:
   removing the `ISTIO_MUTUAL` traffic policy. Note that `default-rule` is in the
   `istio-system` namespace - by default, the `istio-system` namespace is
   considered the "root namespace" for configuration (although this can be overridden via
-  the `rootNamespace` property in the [`MeshConfig` resource](/docs/reference/config/istio.mesh.v1alpha1/#MeshConfig).
+  the `rootNamespace` property in the [`MeshConfig` resource](/pt-br/docs/reference/config/istio.mesh.v1alpha1/#MeshConfig).
   That means that this destination rule potentially affects all other services
   in the mesh.
 * Add a new destination rule in the same namespace as the service (in this case,

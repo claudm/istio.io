@@ -17,9 +17,9 @@ and list-of-string typed JWT claims.
 
 Before you begin this task, perform the following actions:
 
-* Read [Authorization](/docs/concepts/security/#authorization) and [Authentication](/docs/concepts/security/#authentication).
+* Read [Authorization](/pt-br/docs/concepts/security/#authorization) and [Authentication](/pt-br/docs/concepts/security/#authentication).
 
-* Install Istio using [Istio installation guide](/docs/setup/install/istioctl/).
+* Install Istio using [Istio installation guide](/pt-br/docs/setup/install/istioctl/).
 
 * Deploy two workloads: `httpbin` and `sleep`. Deploy these in one namespace,
 for example `foo`. Both workloads run with an Envoy proxy in front of each.

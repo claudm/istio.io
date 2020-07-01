@@ -11,5 +11,5 @@ test: n/a
 In addition to the above documentation links, please consider the following resources:
 
 - [Frequently Asked Questions](/faq)
-- [Glossary](/docs/reference/glossary)
+- [Glossary](/pt-br/docs/reference/glossary)
 - [Documentation Archive](https://archive.istio.io/), which contains snapshots of the documentation for prior releases.

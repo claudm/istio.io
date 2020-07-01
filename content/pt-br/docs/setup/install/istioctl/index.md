@@ -8,32 +8,32 @@ test: no
 
 Follow this guide to install and configure an Istio mesh for in-depth evaluation or production use.
 If you are new to Istio, and just want to try it out, follow the
-[quick start instructions](/docs/setup/getting-started) instead.
+[quick start instructions](/pt-br/docs/setup/getting-started) instead.
 
-This installation guide uses the [`istioctl`](/docs/reference/commands/istioctl/) command line
+This installation guide uses the [`istioctl`](/pt-br/docs/reference/commands/istioctl/) command line
 tool to provide rich customization of the Istio control plane and of the sidecars for the Istio data plane.
 It has user input validation to help prevent installation errors and customization options to
 override any aspect of the configuration.
 
 Using these instructions, you can select any one of Istio's built-in
-[configuration profiles](/docs/setup/additional-setup/config-profiles/)
+[configuration profiles](/pt-br/docs/setup/additional-setup/config-profiles/)
 and then further customize the configuration for your specific needs.
 
 Full customization of the installation can be done through the
-[`IstioOperator` API](/docs/reference/config/istio.operator.v1alpha1/).
+[`IstioOperator` API](/pt-br/docs/reference/config/istio.operator.v1alpha1/).
 
 ## Prerequisites
 
 Before you begin, check the following prerequisites:
 
-1. [Download the Istio release](/docs/setup/getting-started/#download).
-1. Perform any necessary [platform-specific setup](/docs/setup/platform-setup/).
-1. Check the [Requirements for Pods and Services](/docs/ops/deployment/requirements/).
+1. [Download the Istio release](/pt-br/docs/setup/getting-started/#download).
+1. Perform any necessary [platform-specific setup](/pt-br/docs/setup/platform-setup/).
+1. Check the [Requirements for Pods and Services](/pt-br/docs/ops/deployment/requirements/).
 
 ## Install Istio using the default profile
 
 The simplest option is to install the `default` Istio
-[configuration profile](/docs/setup/additional-setup/config-profiles/)
+[configuration profile](/pt-br/docs/setup/additional-setup/config-profiles/)
 using the following command:
 
 {{< text bash >}}
@@ -59,7 +59,7 @@ $ istioctl install --set addonComponents.grafana.enabled=true
 In general, you can use the `--set` flag in `istioctl` as you would with
 Helm. The only difference is you must
 prefix the setting paths with `values.` because this is the path to the Helm pass-through API in the
-[`IstioOperator` API](/docs/reference/config/istio.operator.v1alpha1/).
+[`IstioOperator` API](/pt-br/docs/reference/config/istio.operator.v1alpha1/).
 
 ## Install from external charts
 
@@ -265,10 +265,10 @@ $ istioctl verify-install -f $HOME/generated-manifest.yaml
 ## Customizing the configuration
 
 In addition to installing any of Istio's built-in
-[configuration profiles](/docs/setup/additional-setup/config-profiles/),
+[configuration profiles](/pt-br/docs/setup/additional-setup/config-profiles/),
 `istioctl install` provides a complete API for customizing the configuration.
 
-- [The `IstioOperator` API](/docs/reference/config/istio.operator.v1alpha1/)
+- [The `IstioOperator` API](/pt-br/docs/reference/config/istio.operator.v1alpha1/)
 
 The configuration parameters in this API can be set individually using `--set` options on the command
 line. For example, to enable the control plane security feature in a default configuration profile, use this command:
@@ -397,7 +397,7 @@ namespaces:
 ### Configure gateways
 
 Gateways are a special type of component, since multiple ingress and egress gateways can be defined. In the
-[`IstioOperator` API](/docs/reference/config/istio.operator.v1alpha1/), gateways are defined as a list type.
+[`IstioOperator` API](/pt-br/docs/reference/config/istio.operator.v1alpha1/), gateways are defined as a list type.
 The `default` profile installs one ingress gateway, called `istio-ingressgateway`. You can inspect the default values
 for this gateway:
 
@@ -461,7 +461,7 @@ spec:
 
 The `IstioOperator` API allows each component's Kubernetes settings to be customized in a consistent way.
 
-Each component has a [`KubernetesResourceSpec`](/docs/reference/config/istio.operator.v1alpha1/#KubernetesResourcesSpec),
+Each component has a [`KubernetesResourceSpec`](/pt-br/docs/reference/config/istio.operator.v1alpha1/#KubernetesResourcesSpec),
 which allows the following settings to be changed. Use this list to identify the setting to customize:
 
 1. [Resources](https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/#resource-requests-and-limits-of-pod-and-container)
@@ -579,7 +579,7 @@ Creating a custom profile is only required if you need to refer to the profile b
 
 The `IstioOperator` CR, input to `istioctl`, is used to generate the output manifest containing the
 Kubernetes resources to be applied to the cluster. The output manifest can be further customized to add, modify or delete resources
-through the `IstioOperator` [overlays](/docs/reference/config/istio.operator.v1alpha1/#K8sObjectOverlay) API, after it is
+through the `IstioOperator` [overlays](/pt-br/docs/reference/config/istio.operator.v1alpha1/#K8sObjectOverlay) API, after it is
 generated but before it is applied to the cluster.
 
 The following example overlay file (`patch.yaml`) demonstrates the type of output manifest patching that can be done:

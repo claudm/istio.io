@@ -54,7 +54,7 @@ for example:
 * Rich metrics
 
 This sidecar deployment allows Istio to extract a wealth of signals about traffic behavior as
-[attributes](/docs/reference/config/policy-and-telemetry/mixer-overview/#attributes).
+[attributes](/pt-br/docs/reference/config/policy-and-telemetry/mixer-overview/#attributes).
 Istio can use these attributes to enforce policy decisions, and send them to monitoring systems
 to provide information about the behavior of the entire mesh.
 
@@ -91,16 +91,16 @@ Istio can support discovery for multiple environments such as Kubernetes,
 Consul, or VMs.
 
 You can use Istio's
-[Traffic Management API](/docs/concepts/traffic-management/#introducing-istio-traffic-management)
+[Traffic Management API](/pt-br/docs/concepts/traffic-management/#introducing-istio-traffic-management)
 to instruct Istiod to refine the Envoy configuration to exercise more granular control
 over the traffic in your service mesh.
 
-Istiod [security](/docs/concepts/security/) enables strong service-to-service and
+Istiod [security](/pt-br/docs/concepts/security/) enables strong service-to-service and
 end-user authentication with built-in identity and credential management. You
 can use Istio to upgrade unencrypted traffic in the service mesh. Using
 Istio, operators can enforce policies based on service identity rather than
 on relatively unstable layer 3 or layer 4 network identifiers. Starting from
-release 0.5, you can use [Istio's authorization feature](/docs/concepts/security/#authorization)
+release 0.5, you can use [Istio's authorization feature](/pt-br/docs/concepts/security/#authorization)
 to control who can access your services.
 
 Istiod maintains a CA and generates certificates to allow secure mTLS communication

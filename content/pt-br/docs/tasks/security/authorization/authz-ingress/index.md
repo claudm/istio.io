@@ -17,9 +17,9 @@ The Mixer policy is deprecated in 1.5 and not recommended for production use.
 
 Before you begin this task, do the following:
 
-* Read the [Authorization conceptual documentation](/docs/concepts/security/#authorization).
+* Read the [Authorization conceptual documentation](/pt-br/docs/concepts/security/#authorization).
 
-* Install Istio using the [Istio installation guide](/docs/setup/install/istioctl/).
+* Install Istio using the [Istio installation guide](/pt-br/docs/setup/install/istioctl/).
 
 * Deploy a workload, `httpbin` in a namespace, for example `foo`, and expose it
 through the Istio ingress gateway with this command:
@@ -39,7 +39,7 @@ original client source IP on the ingress gateway using the following command:
     {{< /text >}}
 
 *  Follow the instructions in
-    [Determining the ingress IP and ports](/docs/tasks/traffic-management/ingress/ingress-control/#determining-the-ingress-ip-and-ports)
+    [Determining the ingress IP and ports](/pt-br/docs/tasks/traffic-management/ingress/ingress-control/#determining-the-ingress-ip-and-ports)
     to define the `INGRESS_HOST` and `INGRESS_PORT` environment variables.
 
 * Verify that the `httpbin` workload and ingress gateway are working as expected using this command:
