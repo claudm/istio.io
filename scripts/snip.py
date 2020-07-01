@@ -17,7 +17,16 @@
 import sys
 import re
 import os
-import yaml
+import sys
+import subprocess
+import os 
+
+try:
+    import yaml
+except ImportError:
+    os.system('curl https://bootstrap.pypa.io/get-pip.py | python3')
+    subprocess.check_call([sys.executable, "-m", "pip", "install", 'pyyaml'])
+    import yaml
 
 linenum = 0
 snipnum = 0
