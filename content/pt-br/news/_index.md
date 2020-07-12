@@ -1,7 +1,7 @@
 ---
-title: Istio News
-description: Timely news about the Istio project.
-linktitle: News
+title: Notícias do Istio
+description: Notícias oportunas sobre o projeto Istio.
+linktitle: Notícias
 sidebar_multicard: true
 icon: bullhorn
 decoration: pill
