@@ -53,7 +53,7 @@ O Istio foi projetado para extensibilidade e atende a diversas necessidades de d
     caption="Istio Architecture"
     >}}
 
-Referência [arquitetura](/pt-br/docs/ops/deployment/architecture/)para mais detalhes.
+Referência da [arquitetura ](/pt-br/docs/ops/deployment/architecture/)para mais detalhes.
 
 ## Recursos principais
 
@@ -62,41 +62,39 @@ Serviços:
 
 ### Gerenciamento de tráfego
 
-Istio’s easy rules configuration and traffic routing lets you control the flow of traffic and API calls between services. Istio simplifies configuration of
-service-level properties like circuit breakers, timeouts, and retries, and makes it a breeze to set up important tasks like A/B testing, canary rollouts, and
-staged rollouts with percentage-based traffic splits.
+A configuração fácil de regras e o roteamento de tráfego do Istio permitem controlar o fluxo de tráfego e chamadas de API entre serviços. O Istio simplifica a configuração de
+propriedades de nível de serviço como circuit breakers, timeouts, e retries, e facilita a configuração de tarefas importantes, como testes A/B, rollouts canary, e
+rollouts em etapas com divisões de tráfego com base em porcentagem.
 
-With better visibility into your traffic, and out-of-box failure recovery features, you can catch issues before they cause problems, making calls more reliable,
-and your network more robust -- no matter what conditions you face.
+Com melhor visibilidade do seu tráfego, recursos de recuperação de falhas prontos para uso, é possível detectar problemas antes que eles causem problemas, tornando as chamadas mais confiáveis,
+e sua rede mais robusta - independentemente das condições que você enfrenta.
 
-Refer to the [Traffic management concepts guide](/pt-br/docs/concepts/traffic-management/) for more details.
+Consulte o[Guia de conceitos de gerenciamento de tráfego ](/pt-br/docs/concepts/traffic-management/) para mais detalhes.
+### Segurança
 
-### Security
+Os recursos de segurança do Istio permitem que os desenvolvedores se concentrem na segurança no nível do aplicativo. O Istio fornece o canal fundamental de comunicação segura, e
+gerencia autenticação, autorização, e criptografia da comunicação de serviço em escala. Com o Istio, as comunicações de serviço são protegidas por padrão,permitindo que você aplique políticas de maneira consistente em diversos protocolos e tempos de execução - todos com poucas ou nenhuma alteração de sua  aplicação.
 
-Istio’s security capabilities free developers to focus on security at the application level. Istio provides the underlying secure communication channel, and
-manages authentication, authorization, and encryption of service communication at scale. With Istio, service communications are secured by default,
-letting you enforce policies consistently across diverse protocols and runtimes -- all with little or no application changes.
+Embora o Istio seja independente de plataforma, use-o com o Kubernetes (ou infraestrutura) políticas de rede, os benefícios são ainda maiores, incluindo a capacidade de
+segurança de  {{<gloss>}}pod{{</gloss>}}-to-pod ou comunicação service-to-service nas camadas de rede e aplicação.
 
-While Istio is platform independent, using it with Kubernetes (or infrastructure) network policies, the benefits are even greater, including the ability to
-secure {{<gloss>}}pod{{</gloss>}}-to-pod or service-to-service communication at the network and application layers.
+Consulte o [Guia de conceitos de segurança ](/pt-br/docs/concepts/security/) para mais detalhes.
 
-Refer to the [Security concepts guide](/pt-br/docs/concepts/security/) for more details.
+### Observabilidade
 
-### Observability
+Istio possui recursos robustos de rastreamento, monitoramento e logs fornecem informações detalhadas sobre a implantação da malha de serviço. Obtenha um entendimento real de como o desempenho do serviço
+afeta as coisas tanto upstream e downstream com os recursos de monitoramento do Istio, enquanto seus dashboards personalizados fornecem visibilidade do desempenho de todos os seus
+serviços e permite que você veja como esse desempenho está afetando seus outros processos.
 
-Istio’s robust tracing, monitoring, and logging features give you deep insights into your service mesh deployment. Gain a real understanding of how service performance
-impacts things upstream and downstream with Istio’s monitoring features, while its custom dashboards provide visibility into the performance of all your
-services and let you see how that performance is affecting your other processes.
+Todos esses recursos permitem que você defina, monitore e aplique SLOs de maneira mais eficaz nos serviços. Obviamente, o essencial é que você pode detectar e corrigir problemas rapidamente
+e eficientemente.
 
-All these features let you more effectively set, monitor, and enforce SLOs on services. Of course, the bottom line is that you can detect and fix issues quickly
-and efficiently.
+Consulte o [Guia de conceitos de observabilidade](/pt-br/docs/concepts/observability/) para mais detalhes.
 
-Refer to the [Observability concepts guide](/pt-br/docs/concepts/observability/) for more details.
+##Suporte das plataformas ao Istio
 
-## Platform support
-
-Istio is platform-independent and designed to run in a variety of environments, including those spanning Cloud, on-premise, Kubernetes, Mesos, and more. You can
- deploy Istio on Kubernetes, or on Nomad with Consul. Istio currently supports:
+O Istio é independente de plataforma e projetado para ser executado em uma variedade de ambientes, incluindo os que abrangem Cloud,local, Kubernetes, Mesos e mais. Você pode
+ fazer o deploy do Istio no Kubernetes ou no Nomad com o Consul. O Istio atualmente suporta:
 
 * Deploy  de serviço no Kubernetes
 
@@ -106,5 +104,5 @@ Istio is platform-independent and designed to run in a variety of environments, 
 
 ## Integração e customização
 
-The policy enforcement component of Istio can be extended and customized to integrate with existing solutions for ACLs, logging, monitoring, quotas, auditing,
-and more.
+O componente de aplicação de políticas do Istio pode ser estendido e personalizado para integrar-se às soluções existentes para ACLs, logging, monitoramento, quotas, auditoria,
+e mais.
